@@ -19,3 +19,10 @@ Route::get('/', function () {
         "active"=>'home'
     ]);
 });
+
+Route::get('/class', function () {
+    return view('class', [
+        "title" => "Class",
+        "active" => "class"
+    ]);
+});
