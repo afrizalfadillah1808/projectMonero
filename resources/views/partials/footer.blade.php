@@ -18,6 +18,6 @@
         </div>
     </div>
     <div class="footer-bottom-section">
-        <p>2022 &copy; Made with ❤️ by Udin Gaming</p>
+        <p>2022 &copy; Made with ❤️ by Monero Team</p>
     </div>
 </footer>

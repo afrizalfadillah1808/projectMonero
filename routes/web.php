@@ -20,9 +20,23 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/class', function () {
+Route::get('/kelas', function () {
     return view('class', [
-        "title" => "Class",
-        "active" => "class"
+        "title" => "Kelas",
+        "active" => "Kelas"
+    ]);
+});
+
+Route::get('/daftar', function () {
+    return view('register.index', [
+        "title" => "Daftar",
+        "active" => "Daftar"
+    ]);
+});
+
+Route::get('/masuk', function () {
+    return view('login.index', [
+        "title" => "Masuk",
+        "active" => "Masuk"
     ]);
 });

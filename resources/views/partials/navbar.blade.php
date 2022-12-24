@@ -10,13 +10,7 @@
                     <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Class") ? 'active' : '' }}" href="/class">Class</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Mentors") ? 'active' : '' }}" href="/mentors">Mentors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Discount") ? 'active' : '' }}" href="/discount">Discount</a>
+                    <a class="nav-link {{ ($title === "Kelas") ? 'active' : '' }}" href="/kelas">Kelas</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
@@ -28,19 +22,21 @@
                         <li><a class="dropdown-item" href="/music">Music</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ ($title === "Mentor") ? 'active' : '' }}" href="/mentor">Mentor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ ($title === "Diskon") ? 'active' : '' }}" href="/diskon">Diskon</a>
+                </li>
             </ul>
-            <div class="navbar-nav ms-auto col-5">
-                <input type="text" class="form-control me-2" placeholder="Mau belajar apa hari ini?">
-                <button class="btn btn-light" type="submit">Search</button>
-            </div>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Login") ? 'active' : '' }}" href="/login">Login</a>
+                    <a class="nav-link {{ ($title === "Daftar") ? 'active' : '' }}" href="/daftar">Daftar</a>
                 </li>
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Sign Up") ? 'active' : '' }}" href="/signup">Sign Up</a>
+                    <a class="nav-link {{ ($title === "Masuk") ? 'active' : '' }}" href="/masuk">Masuk</a>
                 </li>
             </ul>
         </div>
