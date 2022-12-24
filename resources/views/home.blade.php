@@ -2,7 +2,7 @@
 
 @section('container')
 
-    <div class="m-5 bg-image rounded-3" style="background-image: url('https://source.unsplash.com/1920x560?programming');">
+    <div class="mx-5 bg-image rounded-3" style="background-image: url('https://source.unsplash.com/1920x560?programming');">
         <div class="mask rounded-3" style="background-color: rgba(0, 0, 0, 0.3); height: 560px;">
             <div class="d-flex mx-5 align-items-center h-100">
                 <div class="text-white">
@@ -44,71 +44,131 @@
         </div>
     </div>
 
-    <div class="expert-section w-100 p-5 d-flex flex-row align-items-center" style="background-color: hsl(0, 0%, 86%, 0.2)">
+    <div class="expert-section w-100 p-5 d-flex flex-row align-items-center" style="background-color: rgb(243, 247, 249)">
         <div class="expert-section-left text-black col-md-7">
             <h1>Menjadi Expert</h1>
             <p>Dukungan kurikulum yang tepat untuk meningkatkan skill, serta metode belajar yang bisa dipilih sendiri.
                 <br>Waktunya wujudkan karier impianmu dengan mudah!</p>
-            {{-- <button class="px-1 py-2 text-white align-items-center rounded btn-success">Lihat Kelas</button> --}}
             <a href="#" class="btn btn-success">Lihat Kelas</a>
         </div>
+
         <div class="d-flex expert-section-right col-md-5 justify-content-end">
-            <img class="rounded-3" src="https://source.unsplash.com/460x460?programming" alt="">
+            <div id="carouselExampleControls" class="carousel slide shadow-sm" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://source.unsplash.com/800x800?programming" class="rounded d-block w-100" style="width: 460px; height: 460px;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/800x800?nature" class="rounded d-block w-100" style="width: 460px; height: 460px;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/800x800?sky" class="rounded d-block w-100" style="width: 460px; height: 460px;" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
 
-    <div class="class-section m-5 align-items-center text-center">
-        <h3 class="text-center mb-5">Kelas <span class="text-success">Populer</span></h3>
-        <div class="class-card-section d-flex flex-row justify-content-around">
+    <div class="d-flex flex-column class-section m-5 align-items-center">
+        <h3 class="mb-5">Kelas <span class="text-success">Populer</span></h3>
+        <div class="d-flex w-100 justify-content-evenly class-card-section">
             <div class="class-card-1 shadow-sm rounded-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/300x180?programming" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                        <h5 class="card-title text-success">Mastering Web Hacking</h5>
-                        <p class="card-text">6 Jam | 69 Video</p>
-                        <a href="#" class="btn btn-success">Lihat Kelas</a>
+                <a class="text-decoration-none text-dark" href="#">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://source.unsplash.com/300x200?programming" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Mixing For Music Producers</h5>
+                            <p class="card-text">20 Jam | 189 Video</p>
+                            <div class="mentor-information d-flex align-items-center">
+                                <img class="rounded-circle" style="width: 50px; height: 50px;" src="https://source.unsplash.com/300x300?person" alt="">
+                                <div class="mentor-name d-flex flex-column ms-3">
+                                    <p class="my-auto">Ahmad Rosid Komarudin</p>
+                                    <p class="my-auto">Mentor</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="m-auto">Rp. 209.999, 00</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-            
             <div class="class-card-2 shadow-sm rounded-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/300x180?programming" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                        <h5 class="card-title text-success">Customer Service Training</h5>
-                        <p class="card-text">8 Jam | 89 Video</p>
-                        <a href="#" class="btn btn-success">Lihat Kelas</a>
+                <a class="text-decoration-none text-dark" href="#">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://source.unsplash.com/300x200?programming" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Mixing For Music Producers</h5>
+                            <p class="card-text">20 Jam | 189 Video</p>
+                            <div class="mentor-information d-flex align-items-center">
+                                <img class="rounded-circle" style="width: 50px; height: 50px;" src="https://source.unsplash.com/300x300?person" alt="">
+                                <div class="mentor-name d-flex flex-column ms-3">
+                                    <p class="my-auto">Ahmad Rosid Komarudin</p>
+                                    <p class="my-auto">Mentor</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="m-auto">Rp. 209.999, 00</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="class-card-3 shadow-sm rounded-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/300x180?programming" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                        <h5 class="card-title text-success">Practical Guide To Learn Bitcoin</h5>
-                        <p class="card-text">9 Jam | 79 Video</p>
-                        <a href="#" class="btn btn-success">Lihat Kelas</a>
+                <a class="text-decoration-none text-dark" href="#">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://source.unsplash.com/300x200?programming" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Mixing For Music Producers</h5>
+                            <p class="card-text">20 Jam | 189 Video</p>
+                            <div class="mentor-information d-flex align-items-center">
+                                <img class="rounded-circle" style="width: 50px; height: 50px;" src="https://source.unsplash.com/300x300?person" alt="">
+                                <div class="mentor-name d-flex flex-column ms-3">
+                                    <p class="my-auto">Ahmad Rosid Komarudin</p>
+                                    <p class="my-auto">Mentor</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="m-auto">Rp. 209.999, 00</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="class-card-4 shadow-sm rounded-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/300x180?programming" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                        <h5 class="card-title text-success">Mixing For Music Producers</h5>
-                        <p class="card-text">8 Jam | 89 Video</p>
-                        <a href="#" class="btn btn-success">Lihat Kelas</a>
+                <a class="text-decoration-none text-dark" href="#">
+                    <div class="card" style="width: 20rem;">
+                        <img src="https://source.unsplash.com/300x200?programming" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Mixing For Music Producers</h5>
+                            <p class="card-text">20 Jam | 189 Video</p>
+                            <div class="mentor-information d-flex align-items-center">
+                                <img class="rounded-circle" style="width: 50px; height: 50px;" src="https://source.unsplash.com/300x300?person" alt="">
+                                <div class="mentor-name d-flex flex-column ms-3">
+                                    <p class="my-auto">Ahmad Rosid Komarudin</p>
+                                    <p class="my-auto">Mentor</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="m-auto">Rp. 209.999, 00</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <a href="#" class="mt-5 btn btn-success">Lihat Kelas Lainnya</a>
     </div>
 
-    <div class="review-section p-5 w-100 d-flex flex-column align-items-center justify-content-center" style="background-color: hsl(0, 0%, 86%, 0.2)">
+    <div class="review-section p-5 w-100 d-flex flex-column align-items-center justify-content-center" style="background-color: rgb(243, 247, 249)">
         <h3 class="mb-5">Apa <span class="text-success">Kata Mereka ?</span></h3>
-        <div class="review-card-section justify-content-around d-flex gap-5">
-            <div class="review-card-1 p-4 rounded-3 bg-white shadow-sm">
+        <div class="review-card-section justify-content-evenly d-flex">
+            <div class="review-card-1 p-4 rounded-3 bg-white shadow-sm position-relative col-md-5">
+                <img class="rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 66px; height: 66px;" src="https://source.unsplash.com/300x300?person" alt="">
                 <p>Kursus online di Monero Course sangat Berkesan, materinya simple dan tidak berbelit-belit.</p>
                 <div class="users-section d-flex flex-row justify-content-between">
                     <div class="stars-section">
@@ -118,8 +178,9 @@
                 </div>
             </div>
 
-            <div class="review-card-2 p-4 rounded-3 bg-white shadow-sm">
-                <p>Materi kursus online di Monero Course sangat menarik,isinya daging semua dan layak dipelajari.</p>
+            <div class="review-card-2 p-4 rounded-3 bg-white shadow-sm position-relative col-md-5">
+                <img class="rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 66px; height: 66px;" src="https://source.unsplash.com/300x300?person" alt="">
+                <p>Materi kursus online di Monero Course sangat menarik, isinya daging semua dan layak dipelajari.</p>
                 <div class="users-section d-flex flex-row justify-content-between">
                     <div class="stars-section">
                         <i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>
