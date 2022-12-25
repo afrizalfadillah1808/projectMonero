@@ -27,6 +27,14 @@ Route::get('/kelas', function () {
     ]);
 });
 
+
+Route::get('/mentor', function () {
+    return view('mentor', [
+        "title" => "mentor",
+        "active" => "mentor"
+    ]);
+});
+
 Route::get('/daftar', function () {
     return view('register.index', [
         "title" => "Daftar",
