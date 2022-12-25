@@ -27,7 +27,6 @@ Route::get('/kelas', function () {
     ]);
 });
 
-
 Route::get('/mentor', function () {
     return view('mentor', [
         "title" => "mentor",
@@ -46,5 +45,12 @@ Route::get('/masuk', function () {
     return view('login.index', [
         "title" => "Masuk",
         "active" => "Masuk"
+    ]);
+});
+
+Route::get('/diskon', function () {
+    return view('discount', [
+        "title" => "Diskon",
+        "active" => "Diskon"
     ]);
 });
