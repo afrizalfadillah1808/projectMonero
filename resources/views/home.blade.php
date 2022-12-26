@@ -167,18 +167,20 @@
     <div class="review-section p-5 w-100 d-flex flex-column align-items-center justify-content-center" style="background-color: rgb(243, 247, 249)">
         <h3 class="mb-5">Apa <span class="text-success">Kata Mereka ?</span></h3>
         <div class="review-card-section justify-content-evenly d-flex">
-            <div class="review-card-1 p-4 rounded-3 bg-white shadow-sm position-relative col-md-5">
+            @foreach ($user as $u)
+            <div class="review-card-1 p-4 rounded-3 bg-white shadow-sm position-relative col-md-5 style=min-width:100%">
                 <img class="rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 66px; height: 66px;" src="https://source.unsplash.com/300x300?person" alt="">
-                <p>Kursus online di Monero Course sangat Berkesan, materinya simple dan tidak berbelit-belit.</p>
+                <p>{{$u->commentUser}}</p>
                 <div class="users-section d-flex flex-row justify-content-between">
                     <div class="stars-section">
                         <i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>
                     </div>
-                    <span>Budi Gaming</span>
+                    <span>{{$u->namaUser}}</span>
                 </div>
             </div>
+            @endforeach
 
-            <div class="review-card-2 p-4 rounded-3 bg-white shadow-sm position-relative col-md-5">
+            <!-- <div class="review-card-2 p-4 rounded-3 bg-white shadow-sm position-relative col-md-5">
                 <img class="rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 66px; height: 66px;" src="https://source.unsplash.com/300x300?person" alt="">
                 <p>Materi kursus online di Monero Course sangat menarik, isinya daging semua dan layak dipelajari.</p>
                 <div class="users-section d-flex flex-row justify-content-between">
@@ -187,7 +189,7 @@
                     </div>
                     <span>Udin Gaming</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
