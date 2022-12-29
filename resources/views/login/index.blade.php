@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container h-100">
+<div class="container h-100 pb-5 mb-5">
     <div class="row justify-content-sm-center h-100">
         <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-            <div class="text-center my-5">
-                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">
+            <div class="text-center my-0">
+                <img src="{{ asset('img/monero.png') }}" alt="logo" width="200">
             </div>
             <div class="card shadow-lg">
                 <div class="card-body p-5">
@@ -37,7 +37,7 @@
                                 <input type="checkbox" name="remember" id="remember" class="form-check-input">
                                 <label for="remember" class="form-check-label">Ingat Saya</label>
                             </div>
-                            <button type="submit" class="btn btn-primary ms-auto">
+                            <button type="submit" class="btn btn-success ms-auto">
                                 Masuk
                             </button>
                         </div>
@@ -48,9 +48,6 @@
                         Tidak mempunyai Akun? <a href="" class="text-dark">Daftar</a>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mt-5 text-muted">
-                Copyright &copy; 2022 &mdash; Monero Course 
             </div>
         </div>
     </div>

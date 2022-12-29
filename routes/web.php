@@ -28,6 +28,8 @@ Route::get('/kelas', function () {
     ]);
 });
 
+
+
 Route::get('/mentor', function () {
     return view('mentor', [
         "title" => "mentor",
