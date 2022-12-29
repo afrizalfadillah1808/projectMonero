@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Course;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CourseController extends Controller
 {
@@ -15,11 +16,11 @@ class CourseController extends Controller
         ]);
     }
 
-    public function showCourse(Course $class) {
+    public function showCourse(Course $kelas) {
         return view('class', [
             'title' => 'Class',
             'namaMentor' => 'Rizal Fauzi Udin',
-            'class' => $class
+            'class' => $kelas
         ]);
     }
 }
