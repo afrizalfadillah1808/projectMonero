@@ -1,67 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
-<main>
-
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  
-  
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-  
-    <div class="container marketing ">
-  
-      <!-- Three columns of text below the carousel -->
-      <div class="row justify-content-center">
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="https://source.unsplash.com/500x500/" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2 class="fw-normal">Heading</h2>
-          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="https://source.unsplash.com/500x500/" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2 class="fw-normal">Heading</h2>
-          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="https://source.unsplash.com/500x500/" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-          <h2 class="fw-normal">Heading</h2>
-          <p>And lastly this, the third column of representative placeholder content.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-  
-    </div>
-  </main>
+<h3 class="text-indigo-600 fw-bold pt-5 px-5 mx-3 mb-3">Kelas <span class="text-indigo-900">{{ $class->namaCourse }}</span></h3>
+<div class="class-details d-flex flex-column text-indigo-900 px-5 mx-3">
+  <p>Mentored by {{ $class->mentor->namaMentor }} | <a class="text-indigo-600" href="/categories/{{ $class->category->slugCategory }}" style="text-decoration: none;">{{ $class->category->namaCategory }}</a></p>
+  <p>{{ $class->lamaVideo }} Belajar dengan <span> {{ $class->jumlahVideo }}</span></p>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta repellendus consequatur debitis, in cumque dignissimos pariatur at corporis non adipisci quo unde eum voluptate cum nam, deleniti iure magnam placeat quod earum facilis! Possimus reprehenderit aliquid, modi facilis doloremque quibusdam at consequuntur maxime pariatur obcaecati incidunt porro in sit laborum mollitia ea totam accusamus aut. Nihil facere earum, dignissimos quasi eos exercitationem possimus itaque laborum aspernatur architecto aperiam numquam voluptate et dolorum soluta laudantium! Laboriosam eaque amet expedita perspiciatis dolor placeat minima deleniti quas quia nisi reprehenderit, temporibus, a nesciunt quae omnis facere laudantium eius! Quas temporibus a aperiam quae magni autem accusantium ea suscipit ex unde. Maxime eius eaque quas labore quia porro temporibus ipsam tempore, sapiente ullam eveniet dicta quibusdam saepe? Praesentium, earum expedita autem quaerat totam maxime! Ea, delectus sed repudiandae veniam quia asperiores ex? Et rem nisi maiores inventore soluta consequatur, quisquam, eligendi placeat culpa expedita, accusantium nihil facilis harum illo quibusdam dolor. Dolorum non fugit enim maxime excepturi mollitia consectetur doloribus quibusdam quod voluptatibus molestias corrupti neque atque commodi praesentium veniam aut ab sed cum, tempore fuga maiores repudiandae! Itaque corporis ad ex necessitatibus animi dignissimos eos inventore facere! Facilis sunt ducimus quod porro magnam.</p>
+  <p>{{ $class->hargaCourse }}</p>
+  <a href="/classes" class="text-indigo-600" style="text-decoration: none;">Back to Classes</a>
+</div>
 @endsection

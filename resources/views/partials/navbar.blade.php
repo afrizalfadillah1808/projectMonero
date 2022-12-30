@@ -1,45 +1,30 @@
-<nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="/">Monero Course</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Kelas") ? 'active' : '' }}" href="/kelas">Kelas</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="/is">IT & Software</a></li>
-                        <li><a class="dropdown-item" href="/fa">Finance & Accounting</a></li>
-                        <li><a class="dropdown-item" href="/business">Business</a></li>
-                        <li><a class="dropdown-item" href="/marketing">Marketing</a></li>
-                        <li><a class="dropdown-item" href="/music">Music</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Mentor") ? 'active' : '' }}" href="/mentor">Mentor</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Diskon") ? 'active' : '' }}" href="/diskon">Diskon</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Daftar") ? 'active' : '' }}" href="/daftar">Daftar</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Masuk") ? 'active' : '' }}" href="/masuk">Masuk</a>
-                </li>
-            </ul>
-        </div>
+<nav class="sticky-top shadow-sm text-indigo-100 bg-indigo-600">
+    <div class="container d-flex p-3 justify-content-between align-items-center fw-medium">
+      <a class="navbar-brand" href="/">
+        <h5 class="m-0">Monero Course</h5>
+      </a>
+      <div class="d-flex gap-3">
+        <a class="nav-link {{ ($title === "Home") ? 'textActive' : '' }}" href="/">Home</a>
+        <a class="nav-link {{ ($title === "Class") ? 'textActive' : '' }}" href="/classes">Class</a>
+        <li class="nav-item dropdown list-unstyled">
+          <a class="nav-link dropdown-toggle text-decoration-none" role="button" data-bs-toggle="dropdown" href="#">Category</a>
+          <ul class="dropdown-menu bg-indigo-600 rounded-xl border-none">
+            <li><a class="text-indigo-100 fw-medium dropdown-item" href="/categories/it-software">IT & Software</a></li>
+            <li><a class="text-indigo-100 fw-medium dropdown-item" href="/categories/finance-accounting">Finance & Accounting
+            </a></li>
+            <li><a class="text-indigo-100 fw-medium dropdown-item" href="/categories/business">Business</a></li>
+            <li><a class="text-indigo-100 fw-medium dropdown-item" href="/categories/marketing">Marketing</a></li>
+            <li><a class="text-indigo-100 fw-medium dropdown-item" href="/categories/music">Music</a></li>
+          </ul>
+        </li>
+        </li>
+        <a class="nav-link {{ ($title === "Mentors") ? 'textActive' : '' }}" href="/mentors">Mentors</a>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a class="nav-link" href="/register">Sign Up</a>
+        <a class="bg-indigo-100 text-indigo-600 px-4 py-2 shadow shadow-sm rounded-xl" href="/login" style="text-decoration: none;">Login</a>
+      </div>
     </div>
-</nav>
-
+  </nav>
+  
+  

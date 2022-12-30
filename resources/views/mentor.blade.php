@@ -1,38 +1,16 @@
 @extends('layouts.main')
 
 @section('container')
-
-<div class="class-section m-5 align-items-center text-center">
-    <h3 class="text-center mb-5">Team Mentor <span class="text-success">Monero Course</span></h3>
-    <div class="class-card-section d-flex flex-row flex-wrap justify-content-around">
-        <div class="class-card-1 shadow-sm rounded-3">
-            <div class="card" style="width: 18rem;">
-                <img src="https://source.unsplash.com/300x480?programming" style="max-width: 540px;" class="card-img-top" alt="...">
-                <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                    <h5 class="card-title text-success">Rafadhaan Shakeel Khalik</h5>
-                    <a href="#" class="btn btn-success">View Profile</a>
-                </div>
-            </div>
+  <h3 class="text-indigo-600 fw-bold pt-5 px-5 mx-3 mb-3">Mentors</h3>
+  <div class="mentors d-flex flex-column text-indigo-900 px-5 mx-3">
+    @foreach ($mentors as $mentor)
+      <div class="mentor d-flex flex-row">
+        <img src="{{ $mentor->fotoMentor }}" alt="mentor" class="mentor-img">
+        <div class="mentor-details d-flex flex-column">
+          <h4 class="text-indigo-900 fw-bold">{{ $mentor->namaMentor }}</h4>
+          <p>{{ $mentor->deskripsiMentor }}</p>
         </div>
-        
-        <div class="class-card-2 shadow-sm rounded-3">
-            <div class="card" style="width: 18rem;">
-                <img src="https://source.unsplash.com/300x480?programming" class="card-img-top" alt="...">
-                <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                    <h5 class="card-title text-success">Adyatma Mahavir Bagaskara</h5>
-                    <a href="#" class="btn btn-success">View Profile</a>
-                </div>
-            </div>
-        </div>
-        <div class="class-card-3 shadow-sm rounded-3">
-            <div class="card" style="width: 18rem;">
-                <img src="https://source.unsplash.com/300x480?programming" class="card-img-top" alt="...">
-                <div class="card-body" style="background-color: hsl(0, 0%, 86%, 0.2)">
-                    <h5 class="card-title text-success">Pamungkas Dhefin Adibrata</h5>
-                    <a href="#" class="btn btn-success">View Profile</a>
-                </div>
-            </div>
-        </div>
-            </div>
-        </div>
+      </div>
+    @endforeach
+  </div>
 @endsection
