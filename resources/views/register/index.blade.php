@@ -1,53 +1,27 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="container h-100 pb-5 mb-5">
-        <div class="row justify-content-sm-center h-100">
-            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-                <div class="text-center my-0">
-                    <img src="{{ asset('img/monero.png') }}" alt="logo" width="200">
-                </div>
-                <div class="card shadow-lg">
-                    <div class="card-body p-5">
-                        <h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
-                        <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
-                            <div class="mb-3">
-                                <label class="mb-2 text-muted" for="name">Name</label>
-                                <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
-                                <div class="invalid-feedback">
-                                    Name is required	
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="mb-2 text-muted" for="email">E-Mail Address</label>
-                                <input id="email" type="email" class="form-control" name="email" value="" required>
-                                <div class="invalid-feedback">
-                                    Email is invalid
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="mb-2 text-muted" for="password">Password</label>
-                                <input id="password" type="password" class="form-control" name="password" required>
-                                <div class="invalid-feedback">
-                                    Password is required
-                                </div>
-
-                            <div class="align-items-center d-flex mt-3">
-                                <button type="submit" class="btn btn-success ms-auto">
-                                    Register	
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card-footer border-0">
-                        <div class="text-center">
-                            Already have an account? <a href="index.html" class="text-dark">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="register-content d-flex flex-column align-items-center mx-auto p-5" style="width: 35%">
+    <img src="{{ asset('img/monero.png') }}" alt="Logo" width="200">
+    <div class="top-register-content w-100">
+      <h3 class="text-indigo-600 fw-bold">Daftar <span class="text-indigo-900">Akun</span></h3>
+      <p class="text-indigo-900">Daftar Sekarang dan Nikmati Kelas yang tersedia di Monero Course.</p>
     </div>
+    <div class="form-register-content w-100">
+      <form action="/register" method="POST">
+        @csrf
+        <div class="mb-3">
+          <input type="text" class="border-0 bg-indigo-115 rounded-xl p-3 w-100 text-indigo-900" id="name" name="name" placeholder="Full Name">
+        </div>
+        <div class="mb-3">
+          <input type="email" class="border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="password" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="bg-indigo-600 border-0 text-indigo-100 p-3 fw-medium shadow-sm rounded-xl text-center w-100 mb-3" style="text-decoration: none; width: 8.5rem; font-size: 18px;">Daftar</button>
+      </form>
+      <p class="text-indigo-900">Sudah Punya Akun ? <a href="/login" class="text-indigo-600 text-decoration-none">Login</a></p>
+    </div>
+  </div>
 @endsection

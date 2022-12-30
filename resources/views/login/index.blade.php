@@ -1,55 +1,26 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container h-100 pb-5 mb-5">
-    <div class="row justify-content-sm-center h-100">
-        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-            <div class="text-center my-0">
-                <img src="{{ asset('img/monero.png') }}" alt="logo" width="200">
-            </div>
-            <div class="card shadow-lg">
-                <div class="card-body p-5">
-                    <h1 class="fs-4 card-title fw-bold mb-4">Masuk</h1>
-                    <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
-                        <div class="mb-3">
-                            <label class="mb-2 text-muted" for="email">Alamat E-mail</label>
-                            <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-                            <div class="invalid-feedback">
-                                Email tidak sesuai
-                            </div>
-                        </div>
 
-                        <div class="mb-3">
-                            <div class="mb-2 w-100">
-                                <label class="text-muted" for="password">Password</label>
-                                <a href="forgot.html" class="float-end">
-                                    Lupa Password?
-                                </a>
-                            </div>
-                            <input id="password" type="password" class="form-control" name="password" required>
-                            <div class="invalid-feedback">
-                                Masukkan Kata Sandi
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center">
-                            <div class="form-check">
-                                <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                                <label for="remember" class="form-check-label">Ingat Saya</label>
-                            </div>
-                            <button type="submit" class="btn btn-success ms-auto">
-                                Masuk
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer py-3 border-0">
-                    <div class="text-center">
-                        Tidak mempunyai Akun? <a href="" class="text-dark">Daftar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="login-content d-flex flex-column align-items-center mx-auto p-5" style="width: 35%">
+    <img src="{{ asset('img/monero.png') }}" alt="Logo" width="200">
+    <div class="top-login-content w-100">
+      <h3 class="text-indigo-900 fw-bold">Login <span class="text-indigo-600">Akun</span></h3>
+      <p class="text-indigo-900">Masuk untuk Mengakses Kelas kamu di Monero Course.</p>
     </div>
-</div>
+    <div class="form-login-content w-100">
+      <form action="/login" method="POST">
+        @csrf
+        <div class="mb-3">
+          <input type="email" class="border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="password" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="bg-indigo-600 border-0 text-indigo-100 p-3 fw-medium shadow-sm rounded-xl text-center w-100 mb-3" style="text-decoration: none; width: 8.5rem; font-size: 18px;">Daftar</button>
+      </form>
+      <p class="text-indigo-900">Belum Punya Akun ? <a href="/register" class="text-indigo-600 text-decoration-none">Daftar</a></p>
+    </div>
+  </div>
+  
 @endsection

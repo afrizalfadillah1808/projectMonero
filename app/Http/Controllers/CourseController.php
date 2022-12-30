@@ -16,11 +16,11 @@ class CourseController extends Controller
         ]);
     }
 
-    public function showCourse(Course $kelas) {
+    public function showCourse(Course $class) {
         return view('class', [
             'title' => 'Class',
             'namaMentor' => 'Rizal Fauzi Udin',
-            'class' => $kelas
+            'class' => $class
         ]);
     }
 }
