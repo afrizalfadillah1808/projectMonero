@@ -14,7 +14,7 @@
     <div class="diskon-list d-flex flex-wrap gap-3 w-100">
       @foreach ($courses as $course)
       <div class="discount-1 p-3 d-flex flex-column gap-2 shadow-sm w-lg-25 rounded-xl bg-indigo-600 text-indigo-100" style="width: 30%">
-        <img src="https://source.unsplash.com/330x200?Web+Programming" class="img-fluid rounded-xl" alt="" style="width: 330px; max-height: 200px;">
+        <img src="https://source.unsplash.com/330x200?Web+Programming" class="img-fluid rounded-xl" alt="" style="width: auto; max-height: 200px;">
         <div class="discount-content">
           <p class="fw-medium" style="font-size: 18px; font-style:italic">{{ $course->namaCourse }}</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quaerat dolorum consectetur sapiente quibusdam velit dolores dolorem fugit dolor harum.</p>
