@@ -4,6 +4,7 @@ use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Models\Category;
+use App\Models\Mentor;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,8 +46,7 @@ Route::get('/categories/{category:slugCategory}', function (Category $category) 
 Route::get('/mentors', function () {
     return view('mentors', [
         'title' => 'Mentors',
-        'namaMentor' => 'Rizal Fauzi Udin',
-        'biodataMentor' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+        'mentors' => Mentor::all()
     ]);
 });
 

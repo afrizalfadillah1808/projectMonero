@@ -19,7 +19,7 @@ class CourseFactory extends Factory
         return [
           'category_id' => $this->faker->numberBetween(1, 5),
           'mentor_id' => $this->faker->numberBetween(1, 3),
-          'namaCourse' => $this->faker->sentence(2),
+          'namaCourse' => $this->faker->word(2),
           'slugCourse' => $this->faker->slug(3),
           'lamaVideo' => $this->faker->numberBetween(11, 20) . ' Jam',
           'jumlahVideo' => $this->faker->numberBetween(80, 110) . ' Video',
