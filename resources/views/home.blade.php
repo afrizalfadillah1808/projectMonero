@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="second-home-section d-flex align-items-center p-5 gap-3 bg-indigo-115 w-100">
-    <div class="left-section d-flex flex-column gap-3 p-3" style="width: 60%">
+    <div class="left-section d-flex flex-column gap-3 p-3" style="max-width: calc(63% + 3.75px)">
       <h3 class="text-indigo-900 fw-bold">Menjadi <span class="text-indigo-600">Expert</span></h3>
       <p class="text-indigo-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam excepturi iure nam unde, nostrum libero ullam nemo ratione molestias, repudiandae placeat voluptate recusandae voluptatem porro exercitationem blanditiis neque quis suscipit rerum. Magni cupiditate est neque nisi, iste quos adipisci cum. Laboriosam enim inventore cum, quos exercitationem fuga similique. Fugiat reiciendis atque repudiandae nulla porro ea blanditiis doloribus impedit corporis cumque.</p>
       <a class="bg-indigo-600 text-indigo-100 px-4 py-2 fw-medium shadow-sm rounded-xl text-center" href="#" style="text-decoration: none; width: 8.5rem;">Lihat Kelas</a>
