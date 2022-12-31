@@ -17,7 +17,7 @@
         <div class="mb-3">
           <input type="password" class="border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="password" name="password" placeholder="Password">
         </div>
-        <button type="submit" class="bg-indigo-600 border-0 text-indigo-100 p-3 fw-medium shadow-sm rounded-xl text-center w-100 mb-3" style="text-decoration: none; width: 8.5rem; font-size: 18px;">Daftar</button>
+        <button type="submit" class="bg-indigo-600 border-0 text-indigo-100 p-3 fw-medium shadow-sm rounded-xl text-center w-100 mb-3" style="text-decoration: none; width: 8.5rem; font-size: 18px;">Masuk</button>
       </form>
       <p class="text-indigo-900">Belum Punya Akun ? <a href="/register" class="text-indigo-600 text-decoration-none">Daftar</a></p>
     </div>
