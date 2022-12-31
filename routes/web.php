@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Models\Category;
 use App\Models\Mentor;
+use App\Models\Checkout;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,5 +62,12 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('login.index', [
         'title' => 'Login'
+    ]);
+});
+
+// Checkout
+Route::get('/checkout', function() {
+    return view('checkout.index', [
+        'title' => 'Checkout'
     ]);
 });
