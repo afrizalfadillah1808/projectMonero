@@ -10,7 +10,7 @@
       <form action="/register" method="POST">
         @csrf
         <div class="mb-3">
-          <input type="text" class="@error('name') is-invalid @enderrorborder-0 bg-indigo-115 rounded-xl p-3 w-100 text-indigo-900" id="name" name="name" placeholder="Nama" required value="{{ old('name') }}">
+          <input type="text" class="@error('name') is-invalid @enderror border-0 bg-indigo-115 rounded-xl p-3 w-100 text-indigo-900" id="name" name="name" placeholder="Nama" required value="{{ old('name') }}">
         </div>
         @error('name')
           <div class="invalid-feedback text-capitalize">
@@ -18,7 +18,7 @@
           </div>
         @enderror
         <div class="mb-3">
-          <input type="text" class="@error('username') is-invalid @enderrorborder-0 bg-indigo-115 rounded-xl p-3 w-100 text-indigo-900" id="username" name="username" placeholder="Username" required value="{{ old('username') }}">
+          <input type="text" class="@error('username') is-invalid @enderror border-0 bg-indigo-115 rounded-xl p-3 w-100 text-indigo-900" id="username" name="username" placeholder="Username" required value="{{ old('username') }}">
         </div>
         @error('username')
           <div class="invalid-feedback text-capitalize">
@@ -26,7 +26,7 @@
           </div>
         @enderror
         <div class="mb-3">
-          <input type="email" class="@error('email') is-invalid @enderrorborder-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="email" name="email" placeholder="Email" required value="{{ old('email') }}">
+          <input type="email" class="@error('email') is-invalid @enderror border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="email" name="email" placeholder="Email" required value="{{ old('email') }}">
         </div>
         @error('email')
           <div class="invalid-feedback text-capitalize">
@@ -34,7 +34,7 @@
           </div>
         @enderror
         <div class="mb-3">
-          <input type="password" class="@error('password') is-invalid @enderrorborder-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="password" name="password" placeholder="Password" required>
+          <input type="password" class="@error('password') is-invalid @enderror border-0 bg-indigo-115 rounded-xl p-3 p-2 w-100 text-indigo-900" id="password" name="password" placeholder="Password" required>
         </div>
         @error('password')
           <div class="invalid-feedback text-capitalize">
