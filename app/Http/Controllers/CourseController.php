@@ -3,21 +3,38 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Mentor;
+use App\Models\Category;
+use App\Models\Discount;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class CourseController extends Controller
 {
     public function indexCourse() {
-        return view('classes', [
-            'title' => 'Class',
+
+        $title = '';
+
+        if (request('category')) {
+            $category = Category::firstWhere('slugCategory', request('category'));
+            $title = ' pada ' .$category->namaCategory;
+        }
+
+        if (request('mentor')) {
+            $mentor = Mentor::firstWhere('username', request('mentor'));
+            $title = ' oleh ' .$mentor->name;
+        }
+
+
+        return view('classes.classes', [
+            'title' => $title, 'Class',
             'namaMentor' => 'Rizal Fauzi Udin',
-            'classSubjects' => Course::all()
+            'discounts' => Discount::all(),
+            'classSubjects' => Course::latest()->filter(request(['search', 'category', 'mentor']))->get()
         ]);
     }
 
     public function showCourse(Course $class) {
-        return view('class', [
+        return view('classes.class', [
             'title' => 'Class',
             'namaMentor' => 'Rizal Fauzi Udin',
             'class' => $class

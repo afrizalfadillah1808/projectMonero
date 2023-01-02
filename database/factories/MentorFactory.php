@@ -17,9 +17,10 @@ class MentorFactory extends Factory
     public function definition()
     {
         return [
-            'namaMentor' => $this->faker->name(),
-            'emailMentor' => $this->faker->unique()->safeEmail(),
-            'passwordMentor' => bcrypt('password'),
+            'name' => $this->faker->name(),
+            'username' => $this->faker->unique()->userName(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'password' => bcrypt('password'),
             'deskripsiMentor' => $this->faker->text(200)
         ];
     }

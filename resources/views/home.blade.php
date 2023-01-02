@@ -34,13 +34,12 @@
     </div>
   </div>
   <div class="second-home-section d-flex align-items-center p-5 gap-3 bg-indigo-115 w-100">
-    <div class="left-section d-flex flex-column gap-3 p-3" style="max-width: calc(63% + 3.75px)">
+    <div class="left-section d-flex flex-column gap-3 p-3" style="max-width: calc( 66% + 3.75px )">
       <h3 class="text-indigo-900 fw-bold">Menjadi <span class="text-indigo-600">Expert</span></h3>
       <p class="text-indigo-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam excepturi iure nam unde, nostrum libero ullam nemo ratione molestias, repudiandae placeat voluptate recusandae voluptatem porro exercitationem blanditiis neque quis suscipit rerum. Magni cupiditate est neque nisi, iste quos adipisci cum. Laboriosam enim inventore cum, quos exercitationem fuga similique. Fugiat reiciendis atque repudiandae nulla porro ea blanditiis doloribus impedit corporis cumque.</p>
       <a class="bg-indigo-600 text-indigo-100 px-4 py-2 fw-medium shadow-sm rounded-xl text-center" href="#" style="text-decoration: none; width: 8.5rem;">Lihat Kelas</a>
     </div>
-    <div class="right-section w-auto ms-auto p-3">
-      {{-- <img src="https://source.unsplash.com/480x480?Web+Programming" class="img-fluid shadow-sm rounded-xl" alt="" style="max-height: 480px; max-width: 480px;"> --}}
+    <div class="right-section ms-auto w-auto p-3">
       <div id="carouselExampleControls" class="carousel slide shadow-sm" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -86,7 +85,7 @@
             <div class="first-class-section-mentor d-flex gap-3">
               <img src="https://source.unsplash.com/100x100?Person" class="img-fluid rounded-circle" alt="" style="max-width: 49.9px; max-height: 49.9px;">
               <div class="first-class-section-mentor-content d-flex flex-column">
-                <p class="my-auto text-indigo-100">{{ $namaMentor }}</p>
+                <p class="my-auto text-indigo-100">{{ $course->mentor->name }}</p>
                 <p class="my-auto fw-medium text-indigo-100">Mentors</p>
               </div>
             </div>
@@ -111,7 +110,7 @@
           <div class="stars-section">
             <i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i>
           </div>
-          <span class="text-indigo-100">{{ $namaMentor }}</span>
+          <span class="text-indigo-100">{{ $namaUser01 }}</span>
         </div>
       </div>
       <div class="right-comment-section bg-indigo-600 d-flex flex-column rounded-xl shadow-sm position-relative w-50 p-4">
@@ -121,7 +120,7 @@
           <div class="stars-section">
             <i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i>
           </div>
-          <span class="text-indigo-100">{{ $namaMentor }}</span>
+          <span class="text-indigo-100">{{ $namaUser02 }}</span>
         </div>
       </div>
     </div>

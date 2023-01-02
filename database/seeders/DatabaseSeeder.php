@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 use App\Models\Course;
+use App\Models\Discount;
 use App\Models\Mentor;
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Course::factory(12)->create();
+        Course::factory(8)->create();
 
         Category::create([
             'namaCategory' => 'IT & Software',
@@ -46,6 +47,17 @@ class DatabaseSeeder extends Seeder
             'slugCategory' => 'music',
         ]);
 
+        Mentor::create([
+            'name' => 'Administrator',
+            'username' => 'Administrator',
+            'email' => 'administrator@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+            'isAdmin' => '1',
+        ]);
+        
         Mentor::factory(3)->create();
+
+        Discount::factory(3)->create();
     }
 }

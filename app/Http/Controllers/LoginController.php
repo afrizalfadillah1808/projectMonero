@@ -7,20 +7,18 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index()
-    {        
+    public function loginAccount() {
         return view('login.index', [
             'title' => 'Login'
         ]);
     }
 
-    public function authenticate(Request $request)
-    {
+    public function loginAuth(Request $request) {
         $credentials = $request->validate([
             'username' => 'required',
             'password' => 'required'
         ]);
-    
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('dashboard')->with('info', 'Welcome Back ' . Auth::user()->name . '!');
@@ -29,7 +27,7 @@ class LoginController extends Controller
         return back()->with('warning','Invalid Login Credentials!');
     }
 
-    public function logout(Request $request) {
+    public function logoutAuth(Request $request) {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
