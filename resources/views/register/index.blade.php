@@ -2,6 +2,7 @@
 
 @section('container')
   <div class="register-content d-flex flex-column align-items-center mx-auto p-5" style="width: 35%">
+    <img src="{{ asset('img/monero.png') }}" alt="" width="200">
     <div class="top-register-content w-100">
       <h3 class="text-indigo-600 fw-bold">Daftar <span class="text-indigo-900">Akun</span></h3>
       <p class="text-indigo-900">Daftar Sekarang dan Nikmati Kelas yang tersedia di Monero Course.</p>
