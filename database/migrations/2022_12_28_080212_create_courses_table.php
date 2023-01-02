@@ -19,8 +19,10 @@ return new class extends Migration
             $table->foreignId('mentor_id');
             $table->string('namaCourse');
             $table->string('slugCourse');
+            $table->string('imgCourse')->nullable();
             $table->string('lamaVideo');
             $table->string('jumlahVideo');
+            $table->text('deskripsiCourse');
             $table->string('hargaCourse');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

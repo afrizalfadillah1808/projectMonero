@@ -3,33 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-Use Illuminate\Support\Facades\Hash;
+use App\Models\Mentor;
 
 class RegisterController extends Controller
 {
-    public function index()
-    {
+    public function registerAccount() {
         return view('register.index', [
             'title' => 'Register'
         ]);
     }
 
-    public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
-            'username' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8'
+    public function storeAccount(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required|min:5',
+            'email' => 'required|email',
+            'password' => 'required|min:5'
         ]);
 
-        $validatedData['password'] = bcrypt($validatedData['password']);
-        // $validatedData['password'] = Hash::make($validatedData['password']);
-        
+        Mentor::create([
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
 
-        User::create($validatedData);
-        
         return redirect('/login')->with('success','Register Success!');
     }
 }

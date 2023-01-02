@@ -8,3 +8,25 @@ copyCode.forEach(copyC => {
         toast.show();
     });
 });
+
+const namaCourse = document.querySelector('#namaCourse');
+const slugCourse = document.querySelector('#slugCourse');
+
+namaCourse.addEventListener('change', function () {
+    fetch('/dashboard/courses/checkSlug?namaCourse=' + namaCourse.value)
+        .then(response => response.json())
+        .then(data => slugCourse.value = data.slug)
+});
+
+const img = document.querySelector('#imgCourse');
+const imgPreview = document.querySelector('#imgPreview');
+
+img.addEventListener('change', function() {
+    const file = new FileReader();
+    file.readAsDataURL(img.files[0]);
+
+    file.onload = function(e) {
+        imgPreview.src = e.target.result;
+        imgPreview.classList.remove('d-none');
+    }
+});

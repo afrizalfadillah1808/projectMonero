@@ -25,7 +25,7 @@
   border-radius: 0.5rem;
 }
 .rounded-xl {
-  border-radius: 0.75rem;
+  border-radius: 0.75rem !important;
 }
 
 .bg-indigo-100 {
@@ -96,4 +96,12 @@
 }
 .text-indigo-900 {
   color: #3c366b;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #c3dafe;
 }
