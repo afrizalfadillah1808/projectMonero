@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class AdminCategoryController extends Controller
 {
@@ -27,7 +28,10 @@ class AdminCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.categories.create', [
+            'title' => 'Categories',
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -38,7 +42,14 @@ class AdminCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'namaCategory' => 'required',
+            'slugCategory' => 'required|unique:categories'
+        ]);
+
+        Category::create($validatedData);
+
+        return redirect('/dashboard/categories')->with('success', 'Category has been Added');
     }
 
     /**
@@ -60,7 +71,11 @@ class AdminCategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('dashboard.categories.edit', [
+            'title' => 'Categories',
+            'categories' => Category::all(),
+            'category' => $category
+        ]);
     }
 
     /**
@@ -72,7 +87,18 @@ class AdminCategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $validatedData = $request->validate([
+            'namaCategory' => 'required',
+            'slugCategory' => 'required|unique:categories'
+        ]);
+
+        Category::where('id', $category->id)
+            ->update([
+                'namaCategory' => $validatedData['namaCategory'],
+                'slugCategory' => $validatedData['slugCategory']
+            ]);
+
+        return redirect('/dashboard/categories')->with('success', 'Category has been Updated');
     }
 
     /**
@@ -83,6 +109,7 @@ class AdminCategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        Category::destroy($category->id);
+        return redirect('/dashboard/categories')->with('success', 'Category has been Deleted');
     }
 }

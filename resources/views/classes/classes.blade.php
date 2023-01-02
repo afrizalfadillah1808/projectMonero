@@ -22,7 +22,7 @@
 
   <h3 class="text-indigo-600 fw-bold px-5 mx-3 mb-3">Kupon <span class="text-indigo-900">Diskon</span></h3>
   <div class="diskon-section d-flex flex-column gap-3 mb-5 px-5 mx-3">
-    <div class="diskon-list d-flex flex-row gap-4 justify-content-center justify-content-lg-between">
+    <div class="diskon-list d-flex flex-row gap-4">
       @foreach ($discounts as $discount)
         <div class="discount-1 p-3 d-flex flex-column gap-3 shadow-sm rounded-xl bg-indigo-600 text-indigo-100" style="width: 32%">
           <div class="discount-content">
@@ -61,20 +61,20 @@
     <h3 class="text-indigo-900 fw-bold px-5 mx-3 mb-3">Kelas di <span class="text-indigo-600">Monero Course</span></h3>
   @endif
   @if ($classSubjects->count())
-    <div class="list-class-section d-flex align-items-start flex-wrap gap-4 pb-5 px-5 mx-3 justify-content-center justify-content-lg-between">
+    <div class="list-class-section d-flex align-items-start flex-wrap gap-4 pb-5 px-5 mx-3">
       @foreach ($classSubjects as $cS)
       <a href="/class/{{ $cS->slugCourse }}" class="text-decoration-none">
-        <div class="first-class bg-indigo-600 min-h-100 rounded-xl d-flex flex-column shadow-sm gap-3 p-3" style="width: 100%; min-height: auto">
+        <div class="first-class bg-indigo-600 min-h-100 rounded-xl d-flex flex-column shadow-sm gap-3 p-3" style="width: 363px; max-height: auto;">
           @if ($cS->imgCourse)
             <img src="{{ asset('storage/' . $cS->imgCourse) }}" alt="{{ $cS->namaCourse }}" class="img-fluid rounded-xl" style="width: 330px; height: 200px;">
           @else
             <img src="https://source.unsplash.com/330x200?{{ $cS->category->namaCategory }}" class="img-fluid rounded-xl" alt="" style="width: 100%; max-height: 200px;">
           @endif
-          <div class="first-class-section gap-0">
-            <p class="my-auto fw-medium text-indigo-100" style="font-size: 18px; font-style: italic;">{{ $cS->namaCourse }}</p>
+          <div class="first-class-section">
+            <p class="fw-medium text-indigo-100 mt-1" style="font-size: 18px; font-style: italic;">{{ $cS->namaCourse }}</p>
             <p class="text-indigo-100">{{ $cS->category->namaCategory }}</p>
-            <p class="text-indigo-100">
-              {{ $cS->lamaVideo }} Belajar dengan {{ $cS->jumlahVideo }}
+            <p class="text-indigo-100 text-capitalize">
+              {{ $cS->lamaVideo }} Belajar Dengan {{ $cS->jumlahVideo }}
             </p>
             <div class="first-class-section-mentor d-flex gap-3">
               <img src="https://source.unsplash.com/100x100?Person" class="img-fluid rounded-circle" alt="" style="max-width: 49.9px; max-height: 49.9px;">
@@ -85,7 +85,7 @@
             </div>
           </div>
           <hr class="text-indigo-100 border-2 my-0">
-          <div class="second-class-section-bottom d-flex align-items-center justify-content-between">
+          <div class="second-class-section-bottom d-flex align-items-center justify-content-between fixed">
             <p class="my-auto text-indigo-100 fw-medium">{{ $cS->hargaCourse }}</p>
             <p class="my-auto text-indigo-100 fw-medium"><i class="fa-solid fa-star text-indigo-100 fs-5"></i> 4.8</p>
           </div>

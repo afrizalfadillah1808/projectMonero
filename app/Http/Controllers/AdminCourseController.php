@@ -6,9 +6,9 @@ use App\Models\Course;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
-class DashboardCourseController extends Controller
+class AdminCourseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +17,10 @@ class DashboardCourseController extends Controller
      */
     public function index()
     {
-      return view('dashboard.courses.index', [
-        'title' => 'Dashboard',
-        'courses' => Course::where('mentor_id', auth()->user()->id)->get()->load('mentor', 'category')
-      ]);
+        return view('dashboard.admin.courses.index', [
+            'title' => 'Dashboard',
+            'courses' => Course::all()->load('mentor', 'category')
+        ]);
     }
 
     /**
@@ -30,9 +30,9 @@ class DashboardCourseController extends Controller
      */
     public function create()
     {
-        return view('dashboard.courses.create', [
-          'title' => 'Dashboard',
-          'categories' => Category::all()
+        return view('dashboard.admin.courses.create', [
+            'title' => 'Dashboard',
+            'categories' => Category::all()
         ]);
     }
 
@@ -45,25 +45,25 @@ class DashboardCourseController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-          'namaCourse' => 'required',
-          'lamaVideo' => 'required',
-          'jumlahVideo' => 'required',
-          'hargaCourse' => 'required',
-          'category_id' => 'required',
-          'slugCourse' => 'required|unique:courses',
-          'imgCourse' => 'image|file|max:2048',
-          'deskripsiCourse' => 'required'
+            'namaCourse' => 'required',
+            'lamaVideo' => 'required',
+            'jumlahVideo' => 'required',
+            'hargaCourse' => 'required',
+            'category_id' => 'required',
+            'slugCourse' => 'required|unique:courses',
+            'imgCourse' => 'image|file|max:2048',
+            'deskripsiCourse' => 'required'
         ]);
 
         if($request->hasFile('imgCourse')) {
-          $validatedData['imgCourse'] = $request->file('imgCourse')->store('imgCourse', 'public');
+            $validatedData['imgCourse'] = $request->file('imgCourse')->store('imgCourse', 'public');
         }
 
         $validatedData['mentor_id'] = auth()->user()->id;
 
         Course::create($validatedData);
 
-        return redirect('/dashboard/courses')->with('success','Course has been Added!');
+        return redirect('/dashboard/admin/courses')->with('success', 'Course has been Added!');
     }
 
     /**
@@ -74,9 +74,9 @@ class DashboardCourseController extends Controller
      */
     public function show(Course $course)
     {
-        return view('dashboard.courses.show', [
-          'title' => 'Dashboard',
-          'course' => $course->load('mentor', 'category')
+        return view('dashboard.admin.courses.show', [
+            'title' => 'Dashboard',
+            'course' => $course->load('mentor', 'category')
         ]);
     }
 
@@ -88,10 +88,10 @@ class DashboardCourseController extends Controller
      */
     public function edit(Course $course)
     {
-        return view('dashboard.courses.edit', [
-          'title' => 'Dashboard',
-          'course' => $course->load('mentor', 'category'),
-          'categories' => Category::all()
+        return view('dashboard.admin.courses.edit', [
+            'title' => 'Dashboard',
+            'course' => $course->load('mentor', 'category'),
+            'categories' => Category::all()
         ]);
     }
 
@@ -110,12 +110,12 @@ class DashboardCourseController extends Controller
         'jumlahVideo' => 'required',
         'hargaCourse' => 'required',
         'category_id' => 'required',
-        'imgCourse' => 'image|file|max:2048',
-        'deskripsiCourse' => 'required',
+        'slugCourse' => 'required|unique:courses,slugCourse,' . $course->id,
+        'deskripsiCourse' => 'required'
       ];
 
-      if($request->slugCourse != $course->slugCourse) {
-        $rules['slugCourse'] = 'required|unique:courses';
+      if($request->file('imgCourse')) {
+        $rules['imgCourse'] = 'image|file|max:2048';
       }
 
       $validatedData = $request->validate($rules);
@@ -132,7 +132,7 @@ class DashboardCourseController extends Controller
       Course::where('id', $course->id)
         ->update($validatedData);
 
-      return redirect('/dashboard/courses')->with('success','Course has been Updated!');
+      return redirect('/dashboard/admin/courses')->with('success','Course has been Updated!');
     }
 
     /**
@@ -144,12 +144,12 @@ class DashboardCourseController extends Controller
     public function destroy(Course $course)
     {
         if($course->imgCourse) {
-          Storage::disk('public')->delete($course->imgCourse);
+            Storage::disk('public')->delete($course->imgCourse);
         }
 
         Course::destroy($course->id);
 
-        return redirect('/dashboard/courses')->with('success','Course has been Deleted!');
+        return redirect('/dashboard/admin/courses')->with('success','Course has been Deleted!');
     }
 
     public function checkSlug(Request $request) {

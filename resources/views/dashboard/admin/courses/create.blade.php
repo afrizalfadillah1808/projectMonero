@@ -3,7 +3,7 @@
 @section('content')
   <div class="m-0 col-auto col-md-9 col-xl-10 px-sm-2 pt-5">
     <h5 class="ms-5 fw-medium text-indigo-900">Add Course</h5>
-    <form action="/dashboard/courses" method="POST" class="ms-5 col-md-5 pt-2" enctype="multipart/form-data">
+    <form action="/dashboard/admin/courses" method="POST" class="ms-5 col-md-5 pt-2" enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
         <input type="text" class="@error('namaCourse') is-invalid @enderror border-0 bg-indigo-115 rounded-2 p-2 w-100 text-indigo-900" id="namaCourse" name="namaCourse" placeholder="Course Name" value="{{ old('namaCourse') }}" autofocus required>

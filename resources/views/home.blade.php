@@ -36,7 +36,7 @@
   <div class="second-home-section d-flex align-items-center p-5 gap-3 bg-indigo-115 w-100">
     <div class="left-section d-flex flex-column gap-3 p-3" style="max-width: calc( 66% + 3.75px )">
       <h3 class="text-indigo-900 fw-bold">Menjadi <span class="text-indigo-600">Expert</span></h3>
-      <p class="text-indigo-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam excepturi iure nam unde, nostrum libero ullam nemo ratione molestias, repudiandae placeat voluptate recusandae voluptatem porro exercitationem blanditiis neque quis suscipit rerum. Magni cupiditate est neque nisi, iste quos adipisci cum. Laboriosam enim inventore cum, quos exercitationem fuga similique. Fugiat reiciendis atque repudiandae nulla porro ea blanditiis doloribus impedit corporis cumque.</p>
+      <p class="text-indigo-900">Belajar skill IT yang sesuai dengan kebutuhan industri merupakan cara terbaik untuk meningkatkan pengetahuan dan keterampilan kita. Saat ini, kebutuhan akan skill IT yang sesuai dengan kebutuhan industri semakin meningkat. Hal ini dikarenakan teknologi semakin berkembang dan industri-industri membutuhkan tenaga kerja yang memiliki skill IT yang up-to-date.</p>
       <a class="bg-indigo-600 text-indigo-100 px-4 py-2 fw-medium shadow-sm rounded-xl text-center" href="#" style="text-decoration: none; width: 8.5rem;">Lihat Kelas</a>
     </div>
     <div class="right-section ms-auto w-auto p-3">
@@ -79,7 +79,7 @@
           <div class="first-class-section gap-0">
             <p class="my-auto fw-medium text-indigo-100" style="font-size: 18px; font-style: italic;">{{ $course->namaCourse }}</p>
             <p class="text-indigo-100">{{ $course->category->namaCategory }}</p>
-            <p class="text-indigo-100">
+            <p class="text-indigo-100 text-capitalize">
               {{ $course->lamaVideo }} Belajar dengan {{ $course->jumlahVideo }}
             </p>
             <div class="first-class-section-mentor d-flex gap-3">
@@ -105,7 +105,7 @@
     <div class="comment-section d-flex justify-content-around gap-5 p-5">
       <div class="left-comment-section bg-indigo-600 d-flex flex-column rounded-xl shadow-sm position-relative w-50 p-4">
         <img class="rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 66px; height: 66px;" src="https://source.unsplash.com/300x300?person" alt="">
-        <p class="text-indigo-100">{{ $commentUser }}</p>
+        <p class="text-indigo-100">{{ $commentUser01 }}</p>
         <div class="d-flex justify-content-between left-comment-review">
           <div class="stars-section">
             <i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i>
@@ -115,7 +115,7 @@
       </div>
       <div class="right-comment-section bg-indigo-600 d-flex flex-column rounded-xl shadow-sm position-relative w-50 p-4">
         <img class="rounded-circle position-absolute top-0 start-0 translate-middle" style="width: 66px; height: 66px;" src="https://source.unsplash.com/300x300?person" alt="">
-        <p class="text-indigo-100">{{ $commentUser }}</p>
+        <p class="text-indigo-100">{{ $commentUser02 }}</p>
         <div class="d-flex justify-content-between right-comment-review">
           <div class="stars-section">
             <i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i><i class="fa-solid fa-star text-indigo-100 fs-5"></i>
