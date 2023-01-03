@@ -2,7 +2,7 @@
 
 @section('container')
   <h3 class="text-indigo-600 fw-bold pt-5 px-5 mx-3 mb-3">Kelas <span class="text-indigo-900">{{ $class->namaCourse }}</span></h3>
-  <div class="class-details d-flex flex-column text-indigo-900 px-5 mx-3">
+  <div class="class-details d-flex flex-column text-indigo-900 px-5 mx-3 col-lg-10">
     @if ($class->imgCourse)
       <img src="{{ asset('storage/' . $class->imgCourse) }}" alt="{{ $class->namaCourse }}" class="mb-2 img-fluid" style="max-height: 300px; overflow: hidden;">
     @else

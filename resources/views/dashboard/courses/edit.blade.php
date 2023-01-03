@@ -80,8 +80,8 @@
         @enderror
       </div>
       <div class="mb-3">
-        <a href="/dashboard/courses" class="bg-indigo-600 px-4 py-2 fw-medium shadow-sm rounded-xl text-center text-indigo-100 text-decoration-none"><i class="fa-solid fa-arrow-left text-indigo-100 me-1"></i> Back</a>
-        <button type="submit" class="bg-indigo-600 px-4 py-2 fw-medium shadow-sm rounded-xl text-center text-indigo-100 text-decoration-none border-0" style="text-decoration: none;">Edit Course</button>
+        <button class="border-0 bg-indigo-600 px-4 py-2 fw-medium rounded-2 text-center" style="width: auto;"><a class="text-indigo-100" href="/dashboard/courses" style="text-decoration: none;">Back</a></button>
+        <button type="submit" class="bg-indigo-600 px-4 py-2 fw-medium rounded-2 text-center text-indigo-100 text-decoration-none border-0" style="text-decoration: none; width: auto;">Edit Course</button>
       </div>
     </form>
   </div>
