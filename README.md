@@ -1,4 +1,4 @@
-<p align="center"><img src="/public/img/webmonero.png" width="400" alt=""></a></p>
+<p align="center"><img src="https://cdn.discordapp.com/attachments/929421981718294559/1059874009493282927/webmonero.png" alt=""></a></p>
 
 ## Kelompok Monero
 Muhammad Afrizal Fadillah 
