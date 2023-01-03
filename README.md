@@ -1,4 +1,4 @@
-<p align="center"><img src="/public/img/webmonero.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><img src="/public/img/webmonero.png" width="400" alt=""></a></p>
 
 ## Kelompok Monero
 Muhammad Afrizal Fadillah 
