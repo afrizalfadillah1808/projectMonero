@@ -16,7 +16,7 @@ class AdminMentorController extends Controller
     {
         return view('dashboard.mentors.index', [
             'title' => 'Mentors',
-            'mentors' => Mentor::all()->load('mentor', 'category')
+            'mentors' => Mentor::all()
         ]);
     }
 
