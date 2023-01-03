@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '1',
-            'mentor_id' => '1',
+            'mentor_id' => '2',
             'namaCourse' => 'Belajar Basic Python Programming untuk Analisis Data Kompleks',
             'slugCourse' => 'belajar-basic-python-programming-untuk-analisis-data-kompleks',
             'lamaVideo' => '5 jam 3 menit',
@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '1',
-            'mentor_id' => '1',
+            'mentor_id' => '3',
             'namaCourse' => 'Belajar Mengolah dan Menganalisis Data Menggunakan Microsoft Excel',
             'slugCourse' => 'belajar-mengolah-dan-menganalisis-data-menggunakan-microsoft-excel',
             'lamaVideo' => '10 jam 4 menit',
@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '2',
-            'mentor_id' => '2',
+            'mentor_id' => '4',
             'namaCourse' => 'Belajar Cara Mengendalikan Uang Demi Merencanakan Masa Depan',
             'slugCourse' => 'belajar-cara-mengendalikan-uang-demi-merencanakan-masa-depan',
             'lamaVideo' => '5 jam 7 menit',
@@ -104,7 +104,7 @@ class DatabaseSeeder extends Seeder
 
        Course::create([
             'category_id' => '2',
-            'mentor_id' => '2',
+            'mentor_id' => '5',
             'namaCourse' => 'Belajar Akuntansi Keuangan Perusahaan bagi Akuntan Pemula',
             'slugCourse' => 'belajar-akuntansi-keuangan-perusahaan-bagi-akuntan-pemula',
             'lamaVideo' => '9 jam 11 menit',
@@ -122,7 +122,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '3',
-            'mentor_id' => '3',
+            'mentor_id' => '6',
             'namaCourse' => 'Memenangkan Penjualan dengan Digital Selling Skills',
             'slugCourse' => 'memenangkan-penjualan-dengan-digital-selling-skills',
             'lamaVideo' => '2 jam 10 menit',
@@ -136,7 +136,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '3',
-            'mentor_id' => '3',
+            'mentor_id' => '7',
             'namaCourse' => 'Tingkatkan Pembelian dengan Presentasi Penjualan yang Persuasif bagi Pekerja Penjualan',
             'slugCourse' => 'tingkatkan-pembelian-dengan-presentasi-penjualan-yang-persuasif-bagi-pekerja-penjualan',
             'lamaVideo' => '8 jam 57 menit',
@@ -151,7 +151,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '4',
-            'mentor_id' => '4',
+            'mentor_id' => '8',
             'namaCourse' => 'Optimasi Penggunaan Google Analytics untuk Bisnis',
             'slugCourse' => 'optimasi-penggunaan-google-analytics-untuk-bisnis',
             'lamaVideo' => '2 jam 3 menit',
@@ -165,7 +165,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '4',
-            'mentor_id' => '4',
+            'mentor_id' => '9',
             'namaCourse' => 'Merancang Iklan di Meta Ads (Facebook dan Instagram) untuk Menjadi Spesialis Periklanan',
             'slugCourse' => 'merancang-iklan-di-meta-ads-facebook-dan-instagram-untuk-menjadi-spesialis-periklanan',
             'lamaVideo' => '4 jam 47 menit',
@@ -179,8 +179,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Course::create([
-            'category_id' => '4',
-            'mentor_id' => '4',
+            'category_id' => '5',
+            'mentor_id' => '10',
             'namaCourse' => 'Belajar Membaca Not Balok dan Main Piano',
             'slugCourse' => 'belajar-membaca-not-balok-dan-main-piano',
             'lamaVideo' => '5 jam',
@@ -196,8 +196,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Course::create([
-            'category_id' => '4',
-            'mentor_id' => '4',
+            'category_id' => '5',
+            'mentor_id' => '10',
             'namaCourse' => 'Belajar ABRSM Scales dan Arpeggios Grade Initials-3',
             'slugCourse' => 'belajar-abrsm-scales-dan-arpeggios-grade-initials-3',
             'lamaVideo' => '3 jam',
@@ -209,9 +209,166 @@ class DatabaseSeeder extends Seeder
             'hargaCourse' => 'Rp 99.000'
 
         ]);
+
+        Mentor::create([
+            'name' => 'Ahmad Rosi Komarudin',
+            'username' => 'ahmadrk',
+            'email' => 'ahmadrosikomarudin@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            'Ahmad is Professional Trainer teach about Computer Networking & Python Programming. Have experience more than 5 years, make him credible to teach about Computer Networking especially Cisco & Mikrotik.
+
+            Ahmad also work as Network Engineer, doing some project in many big company to handle their network infrastructure. Ahmad use his python skill to manage thousands of networking devices, so many company choose him to manage their big network infrastructure.
+            
+            Ahmad also work as Software Defined Networking (SDN) Developer, Build SDN Application using Django & Flask.',
+            'isAdmin' => '0',
+        ]);
         
+        Mentor::create([
+            'name' => 'Eko Kurniawan Khannedy',
+            'username' => 'ekokk',
+            'email' => 'ekokurniawankhannedy@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => "Hi, my name is Eko Kurniawan Khannedy
+
+            I work as a Technical Architect in one of the biggest ECommerce in Indonesia. I have more than 10 years of experience building Applications in Startup and Corporate Companies
+            
+            I also Content Creator at Programmer Zaman Now. You can see lot's of tutorial about Programming, Web, Backend, Frontend, Mobile and DevOps in Programmer Zaman Now.
+            
+            For more information about Programmer Zaman Now, you can see in Website, Youtube Channel, or Social Media",
+            'isAdmin' => '0',
+        ]);
+
+        Mentor::create([
+            'name' => 'Bale Training',
+            'username' => 'baletraining',
+            'email' => 'baletraining@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            "Sebagai lembaga dibidang pelatihan dan konsultasi kami berkomitmen untuk meningkatkan kualitas SDM dan pengembangan organisasi di perusahaan-perusahaan klien kami.
+
+            Salah satu alat dan modal utama untuk mencapai visi dan misi perusahaan adalah sumber daya manusia (SDM) yang dimiliki yaitu SDM yang mampu menjalankan peran dan fungsinya dengan baik dan benar.
+            
+            SDM merupakan satu-satunya aset yang independen dan dinamis sehingga SDM dapat menjadi aset yang potensial hanya jika dikelola dan dikembangkan dengan cara yang baik.
+            
+            Bale training merupakan institusi yang concern menerapkan pengetahuan “Rahasia Positive Thinking & Positive Feeling” yang mampu merubah SDM perusahaan. Dengan perpaduan dua “Rahasia” tersebut dapat membantu meningkatkan percepatan Kompetensi SDM perusahaan.
+            
+            Skala prioritas Bale Training adalah untuk meningkatkan kinerja SDM melalui program pelatihan yang sesuai dengan kebutuhan karyawan, sistematis dan berkesinambungan. Bale Training juga membantu perusahaan mempersiapkan riset-riset manajemen yang aplicable melalui metodologi yang tepat.
+            
+            Jasa pelatihan kami telah banyak membantu perusahaan-perusahaan dan instansi pemerintahan dalam peningkatan kualitas SDM-nya dan meningkatkan daya saing dalam menghadapi tantangan Global.",
+            'isAdmin' => '0',
+        ]);
+
+        Mentor::create([
+            'name' => 'QM Financial',
+            'username' => 'qmfinancial',
+            'email' => 'qmfinancial@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            "Kami percaya pengetahuan keuangan dapat memperbaiki proses pengambilan keputusan.
+
+            Kami juga percaya setiap orang mampu jadi financial planner bagi diri dan keluarganya sendiri asal dibekali dengan pengetahuan dan keterampilan keuangan yang mencukupi.
+            
+            Proses belajar finansial tidak bisa instan. Kita perlu melalui fase awareness (pengenalan), knowledge (pengetahuan), dan action (praktik).
+            
+            Ayo belajar segala yang finansial bersama QM Financial.
+            Because finance should be practical.",
+            'isAdmin' => '0',
+        ]);
+
+        Mentor::create([
+            'name' => 'Christian Guswai',
+            'username' => 'christianguswai',
+            'email' => 'christianguswai@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            "Christian F. Guswai, adalah Konsultan, Trainer, Author, dan Pembicara Publik di bisnis retail yang telah berpengalaman lebih dari 32 tahun di industri ritel.
+
+            Penerima award: 100 Top Global Training and Development Minds di Kongres Sumber Daya Manusia Dunia di Mumbai, India. Dan pada tahun 2019 mendapatkan award sebagai Top Global Retail Minds di Asia Africa GCC Retail Congress.
+            
+            15 tahun pertamanya dijalani sebagai praktisi bisnis ritel di mana Guswai bersentuhan dengan multi-format ritel seperti; department store (Cahaya Department Stores), perusahaan grosir multinasional (Makro Cash & Carry), Hypermarket (Continent Hypermarket dan Carrefour Indonesia).
+            
+            17 tahun berikutnya, pengalamannya sebagai konsultan bagi banyak peritel di seluruh Indonesia, mulai dari ujung barat hingga bagian timur Indonesia, telah memperkaya pengalamannya dalam menangani berbagai jenis permasalahan di bisnis ritel.
+            
+            Guswai juga berbagi ilmu bisnis ritel baik melalui workshop/training umum maupun pelatihan bagi banyak perusahaan ritel nasional untuk berbagai topik bisnis ritel.
+            
+            Dengan pengalaman dan pengetahuannya yang teruji, Guswai telah menulis 9 buku dalam rangkaian Retail Excellence Series dan telah menjadi buku panduan wajib bagi peritel di seluruh negeri.
+            
+            Selain itu Guswai juga menjadi kontributor sebagai kolumnis dan nara sumber untuk beberapa media baik cetak maupun elektronik.
+            
+            Guswai kerap diundang sebagai pembicara di beberapa forum internasional.",
+            'isAdmin' => '0',
+        ]);
         
-        Mentor::factory(3)->create();
+        Mentor::create([
+            'name' => 'Remote Worker Indonesia',
+            'username' => 'remoteworkerindonesia',
+            'email' => 'remoteworkerindonesia@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            "Persiapan Jadi Remote Worker - Apakah kamu sedang bersiap-siap untuk bekerja secara remote? Jika demikian, selamat datang! Kamu sudah menemukan tim instruktur yang tepat untukmu!
+
+            Kami tahu, kamu mungkin sedang mengalami kebingungan seraya bertanya-tanya harus memulai dari mana sebenarnya untuk bisa menjadi pekerja remote.
+            
+            Tenang, kebingungan dan pertanyaan-pertanyaan tersebut sangat normal, kok. Karena kami juga pernah mengalaminya ketika memulai sebagai pekerja remote.
+            
+            Tapi saat itu, karena masih bau kencur, kami melakukan banyak kesalahan dan kekeliruan. Misalnya saja, stress karena proposal pekerjaan tidak ada yang tembus atau baperan ketika klien meminta revisi berkali-kali.
+            
+            Ironisnya, saat itu tak ada orang yang membantu kami.
+            
+            Nah, agar kamu tidak melakukan kesalahan dan kekeliruan seperti yang kami lakukan dulu, Tim RemoteworkerID akan membagikan panduan dan persiapan apa saja yang harus kamu butuhkan sehingga bisa menjadi pekerja remote.
+            
+            Semoga bisa membantu, ya.",
+            'isAdmin' => '0',
+        ]);
+
+        Mentor::create([
+            'name' => 'Established Jakarta',
+            'username' => 'establishedjakarta',
+            'email' => 'establishedjakarta@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            "Established Jakarta telah membantu banyak mitra untuk terhubung dengan konsumen untuk menmberikan dampak positif bagi bisnis mereka.
+
+            Kami terus belajar untuk meningkatkan pengetahuan dan keahlian kami untuk menciptakan solusi pemasaran yang sesuai dengan kebutuhan bisnis mitra kami.
+            
+            Kami juga memiliki misi untuk memasyarakatkan ilmu digital marketing dan teknologi ke dalam kehidupan setiap orang untuk bisnis dan masyarakat yang lebih baik.
+            
+            Dan sekarang, giliran Anda untuk menyelam lebih dalam dan meningkatkan keterampilan digital Anda",
+            'isAdmin' => '0',
+        ]);
+
+        Mentor::create([
+            'name' => 'KODE by Hacktiv8',
+            'username' => 'hacktiv8',
+            'email' => 'hacktiv@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            "KODE merupakan bagian dari PT Hacktivate Teknologi Indonesia (Hacktiv8), sebuah lembaga pendidikan yang membantu percepatan karir para profesional di era ekonomi digital.
+
+            Kami melihat kesempatan untuk membantu para profesional dalam meningkatkan kemampuan serta kompetensi mereka saat sudah berada di dunia kerja tanpa terikat waktu dan tempat. Karena itu, KODE lahir sebagai sebuah sarana yang memberikan kemudahan untuk meningkatkan skill-skill yang dibutuhkan di dunia kerja. Kami percaya dengan KODE semua bisa belajar!",
+            'isAdmin' => '0',
+        ]);
+
+        Mentor::create([
+            'name' => 'Rangga Fermata',
+            'username' => 'ranggafermata',
+            'email' => 'ranggafermata@monerocourse.com',
+            'password' => bcrypt('password'),
+            'deskripsiMentor' => 
+            'Saya adalah seorang scientist sekaligus dosen yang ekspert di matematika. Saya tertarik ilmu musik dan mendalami penggunaan software fl studio 20. ALhamdulillah saya berhasil menguasainya, adapun lagu-lagu yang berhasil saya remix menggunakan fl studio meliputi genre Pop, house trance, dan MIDI.
+
+            Saya tidak mempunyai pengalaman khusus terkait musik, saya tidak bisa main gitar, tidak bisa main piano, maupun alat musik lain. Saya hanya seorang penikmat musik. Saya senang mendengarkan berbagai macam genre musik dari musik jadul sampai musik terkini.
+            
+            
+            
+            Di era revolusi industri 5.0 ini, segala macam aspek mulai banyak terintegrasi dengan kecanggihan teknologi. Termasuk dunia musik. Anda bisa bikin lagu sebagaimana band professional hanya dengan modal laptop dan duduk manis di depan meja kerja anda. Tetapi untuk mewujudkan itu, anda wajib menguasai salah satu software pembuat musik. FL STUDIO adalah yang paling recomended karena tampilannya lebih sederhana, lebih mudah diaplikaskan dan sudah digunakan oleh banyak DJ berkelas dunia seperti Martin Garrix.
+            
+            
+            
+            Untuk itulah saya disini mecoba membantu mewujudkan impian anda dengan membuka kursus ini.',
+            'isAdmin' => '0',
+        ]);
 
         Discount::factory(3)->create();
     }
