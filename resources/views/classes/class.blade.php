@@ -9,9 +9,9 @@
       <img src="https://source.unsplash.com/1200x300?{{ $class->category->namaCategory }}" alt="{{ $class->namaCourse }}" class="mb-2 img-fluid">
     @endif
     <p>Mentored by <a class="text-indigo-600" href="/classes?mentor={{ $class->mentor->username }}" style="text-decoration: none;">{{ $class->mentor->name }}</a> | <a class="text-indigo-600" href="/classes?category={{ $class->category->slugCategory }}" style="text-decoration: none;">{{ $class->category->namaCategory }}</a></p>
-    <p>{{ $class->lamaVideo }} Belajar dengan <span> {{ $class->jumlahVideo }}</span></p>
+    <p class="text-capitalize">{{ $class->lamaVideo }} Belajar dengan <span> {{ $class->jumlahVideo }}</span></p>
     <p>{{ $class->deskripsiCourse }}</p>
     <p>{{ $class->hargaCourse }} | <a href="/checkout" class="text-indigo-600" style="text-decoration: none;">Buy Class</a></p>
-    <a href="/categories/{{ $class->category->slugCategory }}" class="text-indigo-600" style="text-decoration: none;">Back to Categories</a>
+    <a href="/categories/{{ $class->category->slugCategory }}" class="text-indigo-600 mb-5" style="text-decoration: none;">Back to Categories</a>
   </div>
 @endsection

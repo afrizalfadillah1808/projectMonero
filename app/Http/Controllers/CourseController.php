@@ -29,7 +29,8 @@ class CourseController extends Controller
             'title' => $title, 'Class',
             'namaMentor' => 'Rizal Fauzi Udin',
             'discounts' => Discount::all(),
-            'classSubjects' => Course::latest()->filter(request(['search', 'category', 'mentor']))->get()
+            // 'classSubjects' => Course::latest()->filter(request(['search', 'category', 'mentor']))->get()
+            'classSubjects' => Course::orderByRaw('LENGTH(namaCourse) ASC')->filter(request(['search', 'category', 'mentor']))->get()
         ]);
     }
 

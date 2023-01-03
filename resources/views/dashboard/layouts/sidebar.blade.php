@@ -7,33 +7,16 @@
       </li>
       @can('isAdmin')
         <li>
-          <a href="#submenu2" data-bs-toggle="collapse" class="nav-link text-decoration-none px-0 align-middle text-indigo-100"><i class="fa-solid fa-scroll me-1"></i><span class="ms-1 d-none d-sm-inline">Courses</span></a>
-          <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-            <li class="w-100">
-              <a href="/dashboard/categories/it-software" class="nav-link text-indigo-100 text-decoration-none px-0"><i class="fa-brands fa-microsoft me-2"></i></i><span class="d-none d-sm-inline">IT & Software</span></a>
-            </li>
-            <li>
-              <a href="/dashboard/categories/finance-accounting" class="nav-link text-indigo-100 text-decoration-none px-0"><i class="fa-solid fa-coins me-2"></i><span class="d-none d-sm-inline">Finance & Accounting</span></a>
-            </li>
-            <li>
-              <a href="/dashboard/categories/business" class="nav-link text-indigo-100 text-decoration-none px-0"><i class="fa-solid fa-briefcase me-2"></i><span class="d-none d-sm-inline">Business</span></a>
-            </li>
-            <li>
-              <a href="/dashboard/categories/marketing" class="nav-link text-indigo-100 text-decoration-none px-0"><i class="fa-solid fa-chart-simple me-2"></i><span class="d-none d-sm-inline">Marketing</span></a>
-            </li>
-            <li>
-              <a href="/dashboard/categories/music" class="nav-link text-indigo-100 text-decoration-none px-0"><i class="fa-solid fa-guitar me-2"></i><span class="d-none d-sm-inline">Music</span></a>
-            </li>
-          </ul>    
+          <a href="/dashboard/admin/courses" class="nav-link text-decoration-none align-middle px-0 text-indigo-100"><i class="fa-solid fa-scroll me-1"></i><span class="ms-1 d-none d-sm-inline">Courses</span></a>
         </li>
         <li>
           <a href="/dashboard/categories" class="nav-link text-indigo-100 text-decoration-none px-0 align-middle"><i class="fa-solid fa-list me-1"></i><span class="ms-1 d-none d-sm-inline">Categories</span></a>
         </li>
         <li>
-          <a href="/dashboard/mentors/" class="nav-link text-indigo-100 text-decoration-none px-0 align-middle"><i class="fa-regular fa-user me-1"></i><span class="ms-1 d-none d-sm-inline">Mentors</span></a>
+          <a href="/dashboard/mentors" class="nav-link text-indigo-100 text-decoration-none px-0 align-middle"><i class="fa-regular fa-user me-1"></i><span class="ms-1 d-none d-sm-inline">Mentors</span></a>
         </li>
         <li>
-          <a href="/dashboard/discounts/" class="nav-link text-indigo-100 text-decoration-none px-0 align-middle"><i class="fa-solid fa-tag me-1"></i><span class="ms-1 d-none d-sm-inline">Discount</span></a>
+          <a href="/dashboard/discounts" class="nav-link text-indigo-100 text-decoration-none px-0 align-middle"><i class="fa-solid fa-tag me-1"></i><span class="ms-1 d-none d-sm-inline">Discount</span></a>
         </li>
       @endcan
       @if (Auth::user()->username == 'Administrator')

@@ -6,6 +6,13 @@
     <div class="container m-0 px-0 pt-3">
       <div class="m-0 row">
         <div class="col-10 ms-5 p-0">
+          <a href="/dashboard/mentors/create" class="bg-indigo-600 px-3 py-2 rounded-2 text-center text-indigo-100 text-decoration-none">Add Mentors</a>
+        </div>
+      </div>
+    </div>
+    <div class="container m-0 px-0 pt-4">
+      <div class="m-0 row">
+        <div class="col-10 ms-5 p-0">
           <div class="table-responsive">
             <table id="example" class="table table-bordered" style="width: 100%; border-color: #3c366b;">
               <thead>
@@ -25,12 +32,11 @@
                   <td class="text-indigo-900 text-center align-middle">{{ $mentor->username }}</td>
                   <td class="text-indigo-900 text-center align-middle">{{ $mentor->email }}</td>
                   <td class="d-flex justify-content-center gap-2 align-middle">
-                    <a href="/dashboard/mentor/{{ $mentor->username }}/edit" class="bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-wrench text-indigo-100"></i></a>
-                    <a href="/dashboard/mentor/{{ $mentor->username }}" class="bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-eye text-indigo-100"></i></a>
-                    <form action="/dashboard/mentor/{{ $mentor->id }}" method="POST" class="d-inline">
+                    <a href="/dashboard/mentors/{{ $mentor->username }}/edit" class="bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-wrench text-indigo-100"></i></a>
+                    <form action="/dashboard/mentors/{{ $mentor->username }}" method="POST" class="d-inline">
                       @method('delete')
                       @csrf
-                      <button type="submit" class="border-0 bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-trash text-indigo-100"></i></button>
+                      <button type="submit" onclick="return confirm('Are you Sure?')" class="border-0 bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-trash text-indigo-100"></i></button>
                     </form>
                   </td>
                 </tr>

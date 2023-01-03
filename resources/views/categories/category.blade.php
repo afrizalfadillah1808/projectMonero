@@ -5,11 +5,11 @@
   <div class="diskon-section d-flex flex-column gap-3 mb-5 px-5 mx-3">
     <div class="diskon-list d-flex flex-wrap gap-3 w-100">
       @foreach ($courses as $course)
-      <div class="discount-1 p-3 d-flex flex-column gap-2 shadow-sm w-lg-25 rounded-xl bg-indigo-600 text-indigo-100" style="width: 30%">
+      <div class="discount-1 p-3 d-flex flex-column gap-2 shadow-sm w-lg-25 rounded-xl bg-indigo-600 text-indigo-100" style="width: 24%">
         <div class="discount-content">
           <img src="https://source.unsplash.com/330x200?{{ $course->category->namaCategory }}" class="mb-3 img-fluid rounded-xl" alt="" style="width: 100%; max-height: 200px;">
           <p class="fw-medium" style="font-size: 18px; font-style:italic">{{ $course->namaCourse }}</p>
-          <p>{{ $course->deskripsiCourse }}</p>
+          <p>{{ Str::limit($course->deskripsiCourse, 120) }}</p>
         </div>
         <hr class="text-indigo-100 border-2 my-0">
         <div class="discount-bottom my-auto d-flex flex-row justify-content-between">

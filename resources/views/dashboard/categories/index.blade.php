@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="m-0 col-auto col-md-9 col-xl-10 px-sm-2 pt-5">
-    <h5 class="ms-5 fw-medium text-indigo-900">All Categories</h5>
+    <h5 class="ms-5 fw-medium text-indigo-900">List Category</h5>
     <div class="container m-0 px-0 pt-3">
       <div class="m-0 row">
         <div class="col-10 ms-5 p-0">
@@ -31,7 +31,6 @@
                   <td class="text-indigo-900 text-center align-middle">{{ $category->slugCategory }}</td>
                   <td class="d-flex justify-content-center gap-2 align-middle">
                     <a href="/dashboard/categories/{{ $category->slugCategory }}/edit" class="bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-wrench text-indigo-100"></i></a>
-                    <a href="/dashboard/categories/{{ $category->slugCategory }}" class="bg-indigo-600 py-1 px-2 rounded-2" style="width: 32px; height: 32px;"><i class="fa-solid fa-eye text-indigo-100"></i></a>
                     <form action="/dashboard/categories/{{ $category->slugCategory }}" method="POST" class="d-inline">
                       @method('delete')
                       @csrf

@@ -12,4 +12,8 @@ class Discount extends Model
     protected $guarded = [
       'id'
     ];
+
+    public function getRouteKeyName() {
+      return 'kodeDiscount';
+    }
 }

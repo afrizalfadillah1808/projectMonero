@@ -9,7 +9,10 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminCourseController;
+use App\Http\Controllers\AdminMentorController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminDiscountController;
 use App\Http\Controllers\DashboardCourseController;
 
 
@@ -29,7 +32,8 @@ Route::get('/', function () {
         'title' => 'Home',
         'namaUser01' => 'Widy Nugraha',
         'namaUser02' => 'Dimas Putra',
-        'commentUser' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est deleniti numquam perferendis. Quae, eaque! Maiores enim veniam asperiores sunt? Architecto, corporis. Nesciunt corrupti quia omnis aut obcaecati quam cumque fuga.',
+        'commentUser01' => '"Effective learning outcomes" - website yang mampu menghasilkan hasil belajar yang efektif dan membantu pengguna untuk memahami dan menguasai materi dengan baik.',
+        'commentUser02' => '"Value for money" - website yang memberikan nilai yang sebanding dengan harga yang dibayarkan, baik dari segi kualitas materi ataupun fitur yang disediakan.',
         'courses' => Course::with(['category', 'mentor'])->take(4)->get()
     ]);
 });
@@ -45,7 +49,9 @@ Route::get('/categories/{category:slugCategory}', function (Category $category) 
     return view('categories.category', [
         'title' => 'Category',
         'namaCategory' => $category->namaCategory,
-        'courses' => $category->courses->load('category', 'mentor')
+        // count the length of the namaCourse string and sort it from the shortest to the longest
+        // 'courses' => $category->courses->load('category', 'mentor')->sortBy('namaCourse')
+        'courses' => Course::orderByRaw('LENGTH(namaCourse) ASC')->where('category_id', $category->id)->get()
     ]);
 });
 
@@ -95,11 +101,38 @@ Route::get('/dashboard', function () {
 
 Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/courses', DashboardCourseController::class)->middleware('auth');
+
+// Dashboard, Categories
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except(['show'])->middleware('isAdmin');
+
+// Dashboard, Mentors
+Route::resource('/dashboard/mentors', AdminMentorController::class)->except(['show'])->middleware('isAdmin');
+
+// Dashboard, Discounts
+Route::resource('/dashboard/discounts', AdminDiscountController::class)->except(['show'])->middleware('isAdmin');
+
+// Dashboard, Courses
+Route::resource('/dashboard/admin/courses', AdminCourseController::class)->middleware('isAdmin');
 
 // Checkout
 Route::get('/checkout', function () {
     return view('checkout.index', [
         'title' => 'Checkout',
     ]);
+});
+
+// Dashboard, Discount
+Route::get('/dashboard/discounts', function () {
+  return view('dashboard.discounts.index', [
+      'title' => 'Discount',
+      'discounts' => Discount::all()
+  ]);
+});
+
+// Dashboard, Mentors
+Route::get('/dashboard/mentors', function () {
+  return view('dashboard.mentors.index', [
+      'title' => 'Mentors',
+      'mentors' => Mentor::all()
+  ]);
 });

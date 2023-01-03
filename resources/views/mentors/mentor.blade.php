@@ -9,7 +9,7 @@
         <div class="discount-content">
           <img src="https://source.unsplash.com/330x200?{{ $course->category->namaCategory }}" class="mb-3 img-fluid rounded-xl" alt="" style="width: 100%; max-height: 200px;">
           <p class="fw-medium" style="font-size: 18px; font-style:italic">{{ $course->namaCourse }}</p>
-          <p>{{ $course->deskripsiCourse }}</p>
+          <p>{{ Str::limit($course->deskripsiCourse, 120) }}</p>
         </div>
         <hr class="text-indigo-100 border-2 my-0">
         <div class="discount-bottom my-auto d-flex flex-row justify-content-between">
@@ -17,7 +17,7 @@
             <p class="my-auto fw-medium">{{ $namaMentor }}</p>
           </div>
           <div class="right-bottom">
-            <button class="fw-medium border-0 bg-indigo-100 text-indigo-600 px-3 py-2 shadow shadow-sm rounded-xl"><a class="text-decoration-none text-indigo-600" href="/mentors/detail/{{ $course->mentor->username }}">Lihat Mentor</a></button>
+            <button class="fw-medium border-0 bg-indigo-100 text-indigo-600 px-3 py-2 shadow shadow-sm rounded-xl"><a class="text-decoration-none text-indigo-600" href="/class/{{ $course->slugCourse }}">Lihat Kelas</a></button>
           </div>
         </div>
       </div>

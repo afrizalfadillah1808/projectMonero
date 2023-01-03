@@ -3,7 +3,7 @@
 @section('content')
   <div class="m-0 col-auto col-md-9 col-xl-10 px-sm-2 pt-5">
     <h5 class="ms-5 fw-medium text-indigo-900">Edit Course</h5>
-    <form action="/dashboard/courses/{{ $course->slugCourse }}" method="POST" class="ms-5 col-md-5 pt-2" enctype="multipart/form-data">
+    <form action="/dashboard/admin/courses/{{ $course->slugCourse }}" method="POST" class="ms-5 col-md-5 pt-2" enctype="multipart/form-data">
       @method('put')
       @csrf
       <div class="mb-3">
@@ -80,7 +80,7 @@
         @enderror
       </div>
       <div class="mb-3">
-        <a href="/dashboard/courses" class="bg-indigo-600 px-4 py-2 fw-medium shadow-sm rounded-xl text-center text-indigo-100 text-decoration-none"><i class="fa-solid fa-arrow-left text-indigo-100 me-1"></i> Back</a>
+        <a href="/dashboard/admin/courses" class="bg-indigo-600 px-4 py-2 fw-medium shadow-sm rounded-xl text-center text-indigo-100 text-decoration-none"><i class="fa-solid fa-arrow-left text-indigo-100 me-1"></i> Back</a>
         <button type="submit" class="bg-indigo-600 px-4 py-2 fw-medium shadow-sm rounded-xl text-center text-indigo-100 text-decoration-none border-0" style="text-decoration: none;">Edit Course</button>
       </div>
     </form>
