@@ -14,7 +14,7 @@
         <hr class="text-indigo-100 border-2 my-0">
         <div class="discount-bottom my-auto d-flex flex-row justify-content-between">
           <div class="left-bottom gap-3 d-flex flex-row align-items-center">
-            <p class="my-auto fw-medium">{{ $namaMentor }}</p>
+            <p class="my-auto fw-medium">{{ $course->category->namaCategory }}</p>
           </div>
           <div class="right-bottom">
             <button class="fw-medium border-0 bg-indigo-100 text-indigo-600 px-3 py-2 shadow shadow-sm rounded-xl"><a class="text-decoration-none text-indigo-600" href="/class/{{ $course->slugCourse }}">Lihat Kelas</a></button>

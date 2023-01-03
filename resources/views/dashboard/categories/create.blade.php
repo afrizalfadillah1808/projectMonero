@@ -22,7 +22,8 @@
         @enderror
       </div>
       <div class="mb-3">
-        <button type="submit" class="border-0 bg-indigo-600 px-3 py-2 rounded-2 text-center text-indigo-100 text-decoration-none w-25" style="text-decoration: none; width: 8.5rem; font-size: 18px;">Add Category</button>
+        <button class="border-0 bg-indigo-600 px-4 py-2 fw-medium rounded-2 text-center" style="width: auto;"><a class="text-indigo-100" href="/dashboard/categories" style="text-decoration: none;">Back</a></button>
+        <button type="submit" class="border-0 bg-indigo-600 text-indigo-100 px-4 py-2 fw-medium rounded-2 text-center" style="text-decoration: none; width: auto;">Add Category</button>
       </div>
     </form>
   </div>
