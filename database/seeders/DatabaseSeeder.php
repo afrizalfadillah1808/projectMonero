@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '1',
-            'mentor_id' => '3',
+            'mentor_id' => '2',
             'namaCourse' => 'Belajar Mengolah dan Menganalisis Data Menggunakan Microsoft Excel',
             'slugCourse' => 'belajar-mengolah-dan-menganalisis-data-menggunakan-microsoft-excel',
             'lamaVideo' => '10 jam 4 menit',
@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '2',
-            'mentor_id' => '4',
+            'mentor_id' => '3',
             'namaCourse' => 'Belajar Cara Mengendalikan Uang Demi Merencanakan Masa Depan',
             'slugCourse' => 'belajar-cara-mengendalikan-uang-demi-merencanakan-masa-depan',
             'lamaVideo' => '5 jam 7 menit',
@@ -104,7 +104,7 @@ class DatabaseSeeder extends Seeder
 
        Course::create([
             'category_id' => '2',
-            'mentor_id' => '5',
+            'mentor_id' => '3',
             'namaCourse' => 'Belajar Akuntansi Keuangan Perusahaan bagi Akuntan Pemula',
             'slugCourse' => 'belajar-akuntansi-keuangan-perusahaan-bagi-akuntan-pemula',
             'lamaVideo' => '9 jam 11 menit',
@@ -122,7 +122,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '3',
-            'mentor_id' => '6',
+            'mentor_id' => '4',
             'namaCourse' => 'Memenangkan Penjualan dengan Digital Selling Skills',
             'slugCourse' => 'memenangkan-penjualan-dengan-digital-selling-skills',
             'lamaVideo' => '2 jam 10 menit',
@@ -136,7 +136,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '3',
-            'mentor_id' => '7',
+            'mentor_id' => '4',
             'namaCourse' => 'Tingkatkan Pembelian dengan Presentasi Penjualan yang Persuasif bagi Pekerja Penjualan',
             'slugCourse' => 'tingkatkan-pembelian-dengan-presentasi-penjualan-yang-persuasif-bagi-pekerja-penjualan',
             'lamaVideo' => '8 jam 57 menit',
@@ -151,7 +151,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '4',
-            'mentor_id' => '8',
+            'mentor_id' => '5',
             'namaCourse' => 'Optimasi Penggunaan Google Analytics untuk Bisnis',
             'slugCourse' => 'optimasi-penggunaan-google-analytics-untuk-bisnis',
             'lamaVideo' => '2 jam 3 menit',
@@ -165,7 +165,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '4',
-            'mentor_id' => '9',
+            'mentor_id' => '5',
             'namaCourse' => 'Merancang Iklan di Meta Ads (Facebook dan Instagram) untuk Menjadi Spesialis Periklanan',
             'slugCourse' => 'merancang-iklan-di-meta-ads-facebook-dan-instagram-untuk-menjadi-spesialis-periklanan',
             'lamaVideo' => '4 jam 47 menit',
@@ -180,7 +180,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '5',
-            'mentor_id' => '10',
+            'mentor_id' => '6',
             'namaCourse' => 'Belajar Membaca Not Balok dan Main Piano',
             'slugCourse' => 'belajar-membaca-not-balok-dan-main-piano',
             'lamaVideo' => '5 jam',
@@ -197,7 +197,7 @@ class DatabaseSeeder extends Seeder
 
         Course::create([
             'category_id' => '5',
-            'mentor_id' => '10',
+            'mentor_id' => '6',
             'namaCourse' => 'Belajar ABRSM Scales dan Arpeggios Grade Initials-3',
             'slugCourse' => 'belajar-abrsm-scales-dan-arpeggios-grade-initials-3',
             'lamaVideo' => '3 jam',
@@ -224,20 +224,6 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => '0',
         ]);
         
-        Mentor::create([
-            'name' => 'Eko Kurniawan Khannedy',
-            'username' => 'ekokk',
-            'email' => 'ekokurniawankhannedy@monerocourse.com',
-            'password' => bcrypt('password'),
-            'deskripsiMentor' => "Hi, my name is Eko Kurniawan Khannedy
-
-            I work as a Technical Architect in one of the biggest ECommerce in Indonesia. I have more than 10 years of experience building Applications in Startup and Corporate Companies
-            
-            I also Content Creator at Programmer Zaman Now. You can see lot's of tutorial about Programming, Web, Backend, Frontend, Mobile and DevOps in Programmer Zaman Now.
-            
-            For more information about Programmer Zaman Now, you can see in Website, Youtube Channel, or Social Media",
-            'isAdmin' => '0',
-        ]);
 
         Mentor::create([
             'name' => 'Bale Training',
@@ -256,23 +242,6 @@ class DatabaseSeeder extends Seeder
             Skala prioritas Bale Training adalah untuk meningkatkan kinerja SDM melalui program pelatihan yang sesuai dengan kebutuhan karyawan, sistematis dan berkesinambungan. Bale Training juga membantu perusahaan mempersiapkan riset-riset manajemen yang aplicable melalui metodologi yang tepat.
             
             Jasa pelatihan kami telah banyak membantu perusahaan-perusahaan dan instansi pemerintahan dalam peningkatan kualitas SDM-nya dan meningkatkan daya saing dalam menghadapi tantangan Global.",
-            'isAdmin' => '0',
-        ]);
-
-        Mentor::create([
-            'name' => 'QM Financial',
-            'username' => 'qmfinancial',
-            'email' => 'qmfinancial@monerocourse.com',
-            'password' => bcrypt('password'),
-            'deskripsiMentor' => 
-            "Kami percaya pengetahuan keuangan dapat memperbaiki proses pengambilan keputusan.
-
-            Kami juga percaya setiap orang mampu jadi financial planner bagi diri dan keluarganya sendiri asal dibekali dengan pengetahuan dan keterampilan keuangan yang mencukupi.
-            
-            Proses belajar finansial tidak bisa instan. Kita perlu melalui fase awareness (pengenalan), knowledge (pengetahuan), dan action (praktik).
-            
-            Ayo belajar segala yang finansial bersama QM Financial.
-            Because finance should be practical.",
             'isAdmin' => '0',
         ]);
 
@@ -300,27 +269,6 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => '0',
         ]);
         
-        Mentor::create([
-            'name' => 'Remote Worker Indonesia',
-            'username' => 'remoteworkerindonesia',
-            'email' => 'remoteworkerindonesia@monerocourse.com',
-            'password' => bcrypt('password'),
-            'deskripsiMentor' => 
-            "Persiapan Jadi Remote Worker - Apakah kamu sedang bersiap-siap untuk bekerja secara remote? Jika demikian, selamat datang! Kamu sudah menemukan tim instruktur yang tepat untukmu!
-
-            Kami tahu, kamu mungkin sedang mengalami kebingungan seraya bertanya-tanya harus memulai dari mana sebenarnya untuk bisa menjadi pekerja remote.
-            
-            Tenang, kebingungan dan pertanyaan-pertanyaan tersebut sangat normal, kok. Karena kami juga pernah mengalaminya ketika memulai sebagai pekerja remote.
-            
-            Tapi saat itu, karena masih bau kencur, kami melakukan banyak kesalahan dan kekeliruan. Misalnya saja, stress karena proposal pekerjaan tidak ada yang tembus atau baperan ketika klien meminta revisi berkali-kali.
-            
-            Ironisnya, saat itu tak ada orang yang membantu kami.
-            
-            Nah, agar kamu tidak melakukan kesalahan dan kekeliruan seperti yang kami lakukan dulu, Tim RemoteworkerID akan membagikan panduan dan persiapan apa saja yang harus kamu butuhkan sehingga bisa menjadi pekerja remote.
-            
-            Semoga bisa membantu, ya.",
-            'isAdmin' => '0',
-        ]);
 
         Mentor::create([
             'name' => 'Established Jakarta',
@@ -335,18 +283,6 @@ class DatabaseSeeder extends Seeder
             Kami juga memiliki misi untuk memasyarakatkan ilmu digital marketing dan teknologi ke dalam kehidupan setiap orang untuk bisnis dan masyarakat yang lebih baik.
             
             Dan sekarang, giliran Anda untuk menyelam lebih dalam dan meningkatkan keterampilan digital Anda",
-            'isAdmin' => '0',
-        ]);
-
-        Mentor::create([
-            'name' => 'KODE by Hacktiv8',
-            'username' => 'hacktiv8',
-            'email' => 'hacktiv@monerocourse.com',
-            'password' => bcrypt('password'),
-            'deskripsiMentor' => 
-            "KODE merupakan bagian dari PT Hacktivate Teknologi Indonesia (Hacktiv8), sebuah lembaga pendidikan yang membantu percepatan karir para profesional di era ekonomi digital.
-
-            Kami melihat kesempatan untuk membantu para profesional dalam meningkatkan kemampuan serta kompetensi mereka saat sudah berada di dunia kerja tanpa terikat waktu dan tempat. Karena itu, KODE lahir sebagai sebuah sarana yang memberikan kemudahan untuk meningkatkan skill-skill yang dibutuhkan di dunia kerja. Kami percaya dengan KODE semua bisa belajar!",
             'isAdmin' => '0',
         ]);
 
