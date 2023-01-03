@@ -3,14 +3,14 @@
 @section('content')
   <div class="m-0 col-auto col-md-9 col-xl-10 px-sm-2 pt-5">
     <h5 class="ms-5 fw-medium text-indigo-900">My Course</h5>
-    <div class="container m-0 px-0 pt-3">
+    <div class="container m-0 px-0">
       <div class="m-0 row">
         <div class="col-10 ms-5 p-0">
           <button class="border-0 bg-indigo-600 px-4 py-2 fw-medium rounded-2 text-center" style="width: auto;"><a class="text-indigo-100" href="/dashboard/courses/create" style="text-decoration: none;">Add Course</a></button>
         </div>
       </div>
     </div>
-    <div class="container m-0 px-0 pt-4">
+    <div class="container m-0 px-0 pt-3">
       <div class="m-0 row">
         <div class="col-11 ms-5 p-0">
           <div class="table-responsive">

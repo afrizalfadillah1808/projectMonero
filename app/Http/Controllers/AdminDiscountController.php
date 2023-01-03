@@ -16,7 +16,7 @@ class AdminDiscountController extends Controller
     {
         return view('dashboard.discounts.index', [
             'title' => 'Dashboard',
-            'discounts' => Discount::all()->load('mentor', 'category')
+            'discounts' => Discount::all()
         ]);
     }
 

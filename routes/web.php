@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminCourseController;
 use App\Http\Controllers\AdminMentorController;
@@ -49,8 +50,6 @@ Route::get('/categories/{category:slugCategory}', function (Category $category) 
     return view('categories.category', [
         'title' => 'Category',
         'namaCategory' => $category->namaCategory,
-        // count the length of the namaCourse string and sort it from the shortest to the longest
-        // 'courses' => $category->courses->load('category', 'mentor')->sortBy('namaCourse')
         'courses' => Course::orderByRaw('LENGTH(namaCourse) ASC')->where('category_id', $category->id)->get()
     ]);
 });
@@ -59,7 +58,7 @@ Route::get('/categories/{category:slugCategory}', function (Category $category) 
 Route::get('/mentors', function () {
     return view('mentors.mentors', [
         'title' => 'Mentors',
-        'mentors' => Mentor::all()
+        'mentors' => Mentor::where('username', '!=', 'Administrator')->get()
     ]);
 });
 
@@ -99,6 +98,7 @@ Route::get('/dashboard', function () {
     ]);
 })->middleware('auth');
 
+// Dashboard, Mentor Courses
 Route::get('/dashboard/courses/checkSlug', [DashboardCourseController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/courses', DashboardCourseController::class)->middleware('auth');
 
@@ -115,24 +115,5 @@ Route::resource('/dashboard/discounts', AdminDiscountController::class)->except(
 Route::resource('/dashboard/admin/courses', AdminCourseController::class)->middleware('isAdmin');
 
 // Checkout
-Route::get('/checkout', function () {
-    return view('checkout.index', [
-        'title' => 'Checkout',
-    ]);
-});
-
-// Dashboard, Discount
-Route::get('/dashboard/discounts', function () {
-  return view('dashboard.discounts.index', [
-      'title' => 'Discount',
-      'discounts' => Discount::all()
-  ]);
-});
-
-// Dashboard, Mentors
-Route::get('/dashboard/mentors', function () {
-  return view('dashboard.mentors.index', [
-      'title' => 'Mentors',
-      'mentors' => Mentor::all()
-  ]);
-});
+Route::get('/checkout', [CheckoutController::class, 'indexCheckout'])->middleware('auth');
+Route::post('/checkout', [CheckoutController::class, 'checkoutSuccess'])->middleware('auth');
